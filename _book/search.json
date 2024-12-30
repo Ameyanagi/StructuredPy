@@ -1,0 +1,907 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "",
+    "text": "Welcome to StructuredPy\nWelcome to StructuredPy, a practical guide to building well-structured Python applications. This book takes a hands-on approach to learning Python through real-world projects, focusing on both functional and object-oriented programming approaches.",
+    "crumbs": [
+      "Welcome to StructuredPy"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "chapters/01-timeseries-functions.html",
+    "href": "chapters/01-timeseries-functions.html",
+    "title": "1  Time Series Analysis with Functions",
+    "section": "",
+    "text": "1.1 Introduction\nIn this chapter, we’ll analyze time series data from sensors using Python functions. We’ll build a series of focused functions that can:",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Time Series Analysis with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-timeseries-classes.html",
+    "href": "chapters/02-timeseries-classes.html",
+    "title": "2  Time Series Analysis with Classes",
+    "section": "",
+    "text": "2.1 Introduction\nIn the previous chapter, we used functions to analyze sensor data. Now, we’ll reorganize the same functionality using a class-based approach. This will help us: - Keep related data and functions together - Maintain analysis state - Make the code more reusable - Add more complex features easily",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Time Series Analysis with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-device-functions.html",
+    "href": "chapters/03-device-functions.html",
+    "title": "",
+    "section": "",
+    "text": "Device Communication3  03-device-functions.html Code",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>03-device-functions.html</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html",
+    "href": "chapters/04-device-classes.html",
+    "title": "4  Device Communication with Functions",
+    "section": "",
+    "text": "4.1 Introduction\nIn this chapter, we’ll build a mock serial communication system that simulates interaction with a scientific instrument. We’ll create functions to: - Send commands to the device - Read responses - Handle errors - Parse data\nThis will help you understand how to communicate with real hardware devices while practicing in a safe, simulated environment.",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-api-basics.html",
+    "href": "chapters/05-api-basics.html",
+    "title": "5  Building a Basic API Server",
+    "section": "",
+    "text": "5.1 Introduction\nIn this chapter, we’ll create a web API that allows remote access to our devices. We’ll use FastAPI to: - Create HTTP endpoints for device control - Handle device connections - Provide real-time data access - Document our API automatically",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Building a Basic API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-api-complete.html",
+    "href": "chapters/06-api-complete.html",
+    "title": "6  Building a Complete API Server",
+    "section": "",
+    "text": "6.1 Introduction\nIn this chapter, we’ll enhance our basic API server with features needed for production use: - Authentication - WebSocket support for real-time data - Multiple device management - Data logging and persistence",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Building a Complete API Server</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/python_basics.html",
+    "href": "appendices/python_basics.html",
+    "title": "",
+    "section": "",
+    "text": "Appendices7  python_basics.html Code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>python_basics.html</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/setup_guide.html",
+    "href": "appendices/setup_guide.html",
+    "title": "",
+    "section": "",
+    "text": "Appendices8  setup_guide.html Code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>setup_guide.html</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/resources.html",
+    "href": "appendices/resources.html",
+    "title": "",
+    "section": "",
+    "text": "Appendices9  resources.html Code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>resources.html</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#who-this-book-is-for",
+    "href": "index.html#who-this-book-is-for",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "Who This Book Is For",
+    "text": "Who This Book Is For\nThis book is designed for:\n\nPython beginners who understand basic syntax and want to write better code\nProgrammers transitioning to Python from other languages\nAnyone interested in building practical Python applications",
+    "crumbs": [
+      "Welcome to StructuredPy"
+    ]
+  },
+  {
+    "objectID": "index.html#what-youll-build",
+    "href": "index.html#what-youll-build",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "What You’ll Build",
+    "text": "What You’ll Build\nThroughout this book, you’ll work on three main projects:\n\nTime Series Data Analysis\n\nAnalyze sensor data using both functions and classes\nLearn data processing techniques\nVisualize time series data\n\nDevice Communication\n\nBuild a mock serial communication system\nHandle device commands and responses\nManage device state and errors\n\nAPI Development\n\nCreate a FastAPI server\nConnect devices through web APIs\nBuild a complete application\n\n\nEach project is presented twice: first using functions, then using classes. This approach helps you understand when to use each style and how to combine them effectively.",
+    "crumbs": [
+      "Welcome to StructuredPy"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use-this-book",
+    "href": "index.html#how-to-use-this-book",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "How to Use This Book",
+    "text": "How to Use This Book\n\nProject-Based Learning\nEach chapter focuses on building something practical. We start with a problem, break it down into manageable pieces, and build a solution step by step.\n\n\nCode Examples\nAll code examples are available in the code directory. For each project, you’ll find:\ncode/\n├── timeseries/\n├── device/\n└── api/\n\n\nExercises and Practice\nEach chapter includes: - Hands-on exercises - Code challenges - Suggestions for extending the projects",
+    "crumbs": [
+      "Welcome to StructuredPy"
+    ]
+  },
+  {
+    "objectID": "index.html#prerequisites",
+    "href": "index.html#prerequisites",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nTo get the most out of this book, you should:\n\nKnow basic Python syntax (variables, loops, conditionals)\nHave Python installed on your computer\nBe comfortable using a text editor or IDE\nHave a basic understanding of the command line\n\nIf you need to review Python basics, check the appendix for a quick reference.",
+    "crumbs": [
+      "Welcome to StructuredPy"
+    ]
+  },
+  {
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "Getting Started",
+    "text": "Getting Started\n\nClone the book’s repository:\ngit clone https://github.com/Ameyanagi/StructuredPy\nInstall the required packages:\npip install -r requirements.txt\nStart with Chapter 1 and follow along with the code examples.",
+    "crumbs": [
+      "Welcome to StructuredPy"
+    ]
+  },
+  {
+    "objectID": "index.html#what-makes-this-book-different",
+    "href": "index.html#what-makes-this-book-different",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "What Makes This Book Different",
+    "text": "What Makes This Book Different\nInstead of teaching Python concepts in isolation, this book:\n\nShows both functional and object-oriented approaches\nUses real-world examples\nFocuses on writing maintainable code\nDemonstrates practical project organization",
+    "crumbs": [
+      "Welcome to StructuredPy"
+    ]
+  },
+  {
+    "objectID": "index.html#navigation",
+    "href": "index.html#navigation",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "Navigation",
+    "text": "Navigation\n\nUse the sidebar to navigate between chapters\nCode examples can be copied directly from the book\nProjects build on each other progressively\n\nLet’s begin by analyzing time series data in Chapter 1!",
+    "crumbs": [
+      "Welcome to StructuredPy"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nThanks to all contributors and reviewers who helped improve this book.",
+    "crumbs": [
+      "Welcome to StructuredPy"
+    ]
+  },
+  {
+    "objectID": "index.html#contributing",
+    "href": "index.html#contributing",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "Contributing",
+    "text": "Contributing\nFound a mistake or want to improve the book? Visit the GitHub repository to:\n\nReport issues\nSuggest improvements\nContribute content",
+    "crumbs": [
+      "Welcome to StructuredPy"
+    ]
+  },
+  {
+    "objectID": "preface.html",
+    "href": "preface.html",
+    "title": "Preface",
+    "section": "",
+    "text": "Why This Book Exists\nPython’s flexibility is both a blessing and a curse. While it allows you to solve problems in many ways, it can be challenging to know which approach is best. This book aims to bridge the gap between writing code that just works and writing code that’s clear, maintainable, and scalable.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "preface.html#our-approach",
+    "href": "preface.html#our-approach",
+    "title": "Preface",
+    "section": "Our Approach",
+    "text": "Our Approach\nWe believe in learning by doing. Instead of abstract concepts, we focus on practical projects that you might encounter in real work. Each project is implemented twice:\n\nFirst using functions - Simple, straightforward, and easy to understand\nThen using classes - Organized, maintainable, and scalable\n\nThis dual approach helps you understand: - When to use each style - The trade-offs involved - How to combine approaches effectively",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "preface.html#book-structure",
+    "href": "preface.html#book-structure",
+    "title": "Preface",
+    "section": "Book Structure",
+    "text": "Book Structure\nEach project follows this pattern:\n\nProblem Introduction\n\nWhat we’re building\nWhy it matters\nExpected outcomes\n\nFunctional Solution\n\nStep-by-step implementation\nKey concepts explained\nCode organization\n\nObject-Oriented Solution\n\nConverting to classes\nBenefits and trade-offs\nDesign decisions\n\nPractical Extensions\n\nReal-world considerations\nCommon challenges\nFurther improvements",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "preface.html#key-principles",
+    "href": "preface.html#key-principles",
+    "title": "Preface",
+    "section": "Key Principles",
+    "text": "Key Principles\nThroughout the book, we emphasize:\n\nWriting clear, focused code\nBuilding maintainable solutions\nMaking conscious design decisions\nTesting and error handling\nReal-world applications",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "preface.html#a-note-on-style",
+    "href": "preface.html#a-note-on-style",
+    "title": "Preface",
+    "section": "A Note on Style",
+    "text": "A Note on Style\nThere’s rarely one “right” way to solve a programming problem. We present approaches that are:\n\nClear to understand\nEasy to maintain\nPractical to implement\nWell-tested in real applications",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "preface.html#getting-help",
+    "href": "preface.html#getting-help",
+    "title": "Preface",
+    "section": "Getting Help",
+    "text": "Getting Help\nIf you get stuck:\n\nCheck the code in the book’s repository\nReview the chapter’s key concepts\nTry breaking the problem into smaller pieces\nCheck the online resources in the appendix\n\nRemember: Every experienced programmer was once a beginner. Take your time, practice with the examples, and don’t hesitate to experiment with the code.\nLet’s start building better Python applications!",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "chapters/01-timeseries-functions.html#project-overview",
+    "href": "chapters/01-timeseries-functions.html#project-overview",
+    "title": "1  Time Series Analysis with Functions",
+    "section": "1.2 Project Overview",
+    "text": "1.2 Project Overview\nWe’ll work with temperature sensor data that looks like this:\ntimestamp,temperature,humidity\n2024-01-01 00:00:00,22.5,45\n2024-01-01 00:01:00,22.6,46\n2024-01-01 00:02:00,22.4,45\nThis data represents temperature and humidity readings taken every minute. Our goal is to create functions that help us understand this data.",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Time Series Analysis with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-timeseries-functions.html#starting-with-basic-functions",
+    "href": "chapters/01-timeseries-functions.html#starting-with-basic-functions",
+    "title": "1  Time Series Analysis with Functions",
+    "section": "1.3 Starting with Basic Functions",
+    "text": "1.3 Starting with Basic Functions\nLet’s begin by creating functions to load and check our data:\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom datetime import datetime\n\ndef load_sensor_data(filepath):\n    \"\"\"\n    Load sensor data from a CSV file.\n    \n    Example:\n        data = load_sensor_data('sensor_data.csv')\n    \"\"\"\n    try:\n        # Read CSV file with pandas\n        data = pd.read_csv(filepath)\n        \n        # Convert timestamp string to datetime\n        data['timestamp'] = pd.to_datetime(data['timestamp'])\n        \n        return data\n    except FileNotFoundError:\n        print(f\"Error: File {filepath} not found\")\n        return None\n    except Exception as e:\n        print(f\"Error loading data: {e}\")\n        return None\n\ndef check_data_quality(data):\n    \"\"\"\n    Check if data has required columns and valid values.\n    \n    Example:\n        is_valid = check_data_quality(data)\n    \"\"\"\n    # Check required columns\n    required_columns = ['timestamp', 'temperature', 'humidity']\n    has_columns = all(col in data.columns for col in required_columns)\n    \n    if not has_columns:\n        print(\"Error: Missing required columns\")\n        return False\n    \n    # Check for missing values\n    if data.isnull().any().any():\n        print(\"Warning: Data contains missing values\")\n        \n    return True",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Time Series Analysis with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-timeseries-functions.html#analysis-functions",
+    "href": "chapters/01-timeseries-functions.html#analysis-functions",
+    "title": "1  Time Series Analysis with Functions",
+    "section": "1.4 Analysis Functions",
+    "text": "1.4 Analysis Functions\nNow let’s create functions to analyze our data:\ndef calculate_basic_stats(data):\n    \"\"\"\n    Calculate basic statistics for temperature and humidity.\n    \n    Example:\n        stats = calculate_basic_stats(data)\n        print(f\"Average temperature: {stats['temp_mean']:.1f}°C\")\n    \"\"\"\n    stats = {\n        'temp_mean': data['temperature'].mean(),\n        'temp_max': data['temperature'].max(),\n        'temp_min': data['temperature'].min(),\n        'humid_mean': data['humidity'].mean(),\n        'readings_count': len(data)\n    }\n    return stats\n\ndef find_outliers(data, std_threshold=3):\n    \"\"\"\n    Find outlier readings based on standard deviation.\n    \n    Example:\n        outliers = find_outliers(data, std_threshold=2)\n    \"\"\"\n    temp_mean = data['temperature'].mean()\n    temp_std = data['temperature'].std()\n    \n    outliers = data[\n        abs(data['temperature'] - temp_mean) &gt; std_threshold * temp_std\n    ]\n    \n    return outliers",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Time Series Analysis with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-timeseries-functions.html#visualization-functions",
+    "href": "chapters/01-timeseries-functions.html#visualization-functions",
+    "title": "1  Time Series Analysis with Functions",
+    "section": "1.5 Visualization Functions",
+    "text": "1.5 Visualization Functions\nAdding functions to visualize our data:\ndef plot_temperature_trend(data):\n    \"\"\"\n    Create a line plot of temperature over time.\n    \n    Example:\n        plot_temperature_trend(data)\n        plt.show()\n    \"\"\"\n    plt.figure(figsize=(12, 6))\n    plt.plot(data['timestamp'], data['temperature'])\n    plt.title('Temperature Over Time')\n    plt.xlabel('Time')\n    plt.ylabel('Temperature (°C)')\n    plt.grid(True)\n    \ndef plot_daily_pattern(data):\n    \"\"\"\n    Show average temperature pattern by hour of day.\n    \n    Example:\n        plot_daily_pattern(data)\n        plt.show()\n    \"\"\"\n    # Extract hour from timestamp\n    data['hour'] = data['timestamp'].dt.hour\n    \n    # Calculate mean temperature for each hour\n    daily_pattern = data.groupby('hour')['temperature'].mean()\n    \n    plt.figure(figsize=(10, 6))\n    daily_pattern.plot(kind='bar')\n    plt.title('Average Temperature by Hour')\n    plt.xlabel('Hour of Day')\n    plt.ylabel('Average Temperature (°C)')",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Time Series Analysis with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-timeseries-functions.html#putting-it-all-together",
+    "href": "chapters/01-timeseries-functions.html#putting-it-all-together",
+    "title": "1  Time Series Analysis with Functions",
+    "section": "1.6 Putting It All Together",
+    "text": "1.6 Putting It All Together\nLet’s create a function that uses all our analysis tools:\ndef analyze_sensor_data(filepath):\n    \"\"\"\n    Perform complete analysis of sensor data.\n    \n    Example:\n        results = analyze_sensor_data('sensor_data.csv')\n    \"\"\"\n    # Load data\n    data = load_sensor_data(filepath)\n    if data is None:\n        return None\n    \n    # Check data quality\n    if not check_data_quality(data):\n        return None\n    \n    # Perform analysis\n    results = {\n        'statistics': calculate_basic_stats(data),\n        'outliers': find_outliers(data),\n    }\n    \n    # Create visualizations\n    plot_temperature_trend(data)\n    plt.savefig('temperature_trend.png')\n    plt.close()\n    \n    plot_daily_pattern(data)\n    plt.savefig('daily_pattern.png')\n    plt.close()\n    \n    return results",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Time Series Analysis with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-timeseries-functions.html#using-our-functions",
+    "href": "chapters/01-timeseries-functions.html#using-our-functions",
+    "title": "1  Time Series Analysis with Functions",
+    "section": "1.7 Using Our Functions",
+    "text": "1.7 Using Our Functions\nHere’s how to use the functions we created:\n# Load and analyze data\nfilepath = \"sensor_data.csv\"\nresults = analyze_sensor_data(filepath)\n\nif results:\n    # Print statistics\n    stats = results['statistics']\n    print(f\"Data Summary:\")\n    print(f\"- Average temperature: {stats['temp_mean']:.1f}°C\")\n    print(f\"- Temperature range: {stats['temp_min']:.1f}°C to {stats['temp_max']:.1f}°C\")\n    print(f\"- Number of readings: {stats['readings_count']}\")\n    \n    # Report outliers\n    outliers = results['outliers']\n    print(f\"\\nFound {len(outliers)} outlier readings\")",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Time Series Analysis with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-timeseries-functions.html#benefits-of-functional-approach",
+    "href": "chapters/01-timeseries-functions.html#benefits-of-functional-approach",
+    "title": "1  Time Series Analysis with Functions",
+    "section": "1.8 Benefits of Functional Approach",
+    "text": "1.8 Benefits of Functional Approach\nOur functional approach has several advantages:\n\nEach function has a single, clear purpose\nFunctions can be tested independently\nEasy to add new analysis features\nCode is reusable across different projects",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Time Series Analysis with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-timeseries-functions.html#practice-exercises",
+    "href": "chapters/01-timeseries-functions.html#practice-exercises",
+    "title": "1  Time Series Analysis with Functions",
+    "section": "1.9 Practice Exercises",
+    "text": "1.9 Practice Exercises\n\nBasic: Create a function to calculate the temperature change rate between readings.\nIntermediate: Add a function to detect sudden temperature spikes.\nAdvanced: Create a function to identify daily temperature patterns.",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Time Series Analysis with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-timeseries-functions.html#whats-next",
+    "href": "chapters/01-timeseries-functions.html#whats-next",
+    "title": "1  Time Series Analysis with Functions",
+    "section": "1.10 What’s Next",
+    "text": "1.10 What’s Next\nIn the next chapter, we’ll see how to organize this same functionality using classes, which will help us manage more complex analysis requirements.",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Time Series Analysis with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-timeseries-functions.html#references",
+    "href": "chapters/01-timeseries-functions.html#references",
+    "title": "1  Time Series Analysis with Functions",
+    "section": "1.11 References",
+    "text": "1.11 References\nFor more information on time series analysis with Python, see McKinney (2022).\n\n\n\n\n\n\nMcKinney, Wes. 2022. “Time Series Analysis with Python.” Python for Data Analysis.",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Time Series Analysis with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-timeseries-functions.html#introduction",
+    "href": "chapters/01-timeseries-functions.html#introduction",
+    "title": "1  Time Series Analysis with Functions",
+    "section": "",
+    "text": "Load and validate sensor data\nCalculate basic statistics\nFind patterns in the data\nCreate meaningful visualizations",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Time Series Analysis with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-timeseries-classes.html#creating-our-sensor-data-class",
+    "href": "chapters/02-timeseries-classes.html#creating-our-sensor-data-class",
+    "title": "2  Time Series Analysis with Classes",
+    "section": "2.2 Creating Our Sensor Data Class",
+    "text": "2.2 Creating Our Sensor Data Class\nLet’s start by creating a class to handle our sensor data:\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom datetime import datetime\n\nclass SensorData:\n    def __init__(self, filepath=None):\n        \"\"\"\n        Initialize SensorData object.\n        \n        Example:\n            sensor = SensorData('sensor_data.csv')\n        \"\"\"\n        self.data = None\n        self.stats = None\n        \n        if filepath:\n            self.load_data(filepath)\n    \n    def load_data(self, filepath):\n        \"\"\"Load data from CSV file.\"\"\"\n        try:\n            self.data = pd.read_csv(filepath)\n            self.data['timestamp'] = pd.to_datetime(self.data['timestamp'])\n            return True\n        except FileNotFoundError:\n            print(f\"Error: File {filepath} not found\")\n            return False\n        except Exception as e:\n            print(f\"Error loading data: {e}\")\n            return False\n    \n    def is_valid(self):\n        \"\"\"Check if data is valid.\"\"\"\n        if self.data is None:\n            return False\n            \n        required_columns = ['timestamp', 'temperature', 'humidity']\n        has_columns = all(col in self.data.columns for col in required_columns)\n        \n        if not has_columns:\n            print(\"Error: Missing required columns\")\n            return False\n            \n        if self.data.isnull().any().any():\n            print(\"Warning: Data contains missing values\")\n            \n        return True",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Time Series Analysis with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-timeseries-classes.html#adding-analysis-methods",
+    "href": "chapters/02-timeseries-classes.html#adding-analysis-methods",
+    "title": "2  Time Series Analysis with Classes",
+    "section": "2.3 Adding Analysis Methods",
+    "text": "2.3 Adding Analysis Methods\nNow let’s add methods for data analysis:\n    def calculate_statistics(self):\n        \"\"\"\n        Calculate basic statistics for the sensor data.\n        \n        Example:\n            sensor.calculate_statistics()\n            print(f\"Average temp: {sensor.stats['temp_mean']:.1f}°C\")\n        \"\"\"\n        if not self.is_valid():\n            return None\n            \n        self.stats = {\n            'temp_mean': self.data['temperature'].mean(),\n            'temp_max': self.data['temperature'].max(),\n            'temp_min': self.data['temperature'].min(),\n            'humid_mean': self.data['humidity'].mean(),\n            'readings_count': len(self.data)\n        }\n        return self.stats\n    \n    def find_outliers(self, std_threshold=3):\n        \"\"\"\n        Find outlier readings based on standard deviation.\n        \n        Example:\n            outliers = sensor.find_outliers(std_threshold=2)\n        \"\"\"\n        if not self.is_valid():\n            return None\n            \n        temp_mean = self.data['temperature'].mean()\n        temp_std = self.data['temperature'].std()\n        \n        return self.data[\n            abs(self.data['temperature'] - temp_mean) &gt; std_threshold * temp_std\n        ]",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Time Series Analysis with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-timeseries-classes.html#adding-visualization-methods",
+    "href": "chapters/02-timeseries-classes.html#adding-visualization-methods",
+    "title": "2  Time Series Analysis with Classes",
+    "section": "2.4 Adding Visualization Methods",
+    "text": "2.4 Adding Visualization Methods\nLet’s add methods for creating visualizations:\n    def plot_temperature_trend(self):\n        \"\"\"\n        Plot temperature over time.\n        \n        Example:\n            sensor.plot_temperature_trend()\n            plt.show()\n        \"\"\"\n        if not self.is_valid():\n            return\n            \n        plt.figure(figsize=(12, 6))\n        plt.plot(self.data['timestamp'], self.data['temperature'])\n        plt.title('Temperature Over Time')\n        plt.xlabel('Time')\n        plt.ylabel('Temperature (°C)')\n        plt.grid(True)\n    \n    def plot_daily_pattern(self):\n        \"\"\"\n        Plot average temperature by hour.\n        \n        Example:\n            sensor.plot_daily_pattern()\n            plt.show()\n        \"\"\"\n        if not self.is_valid():\n            return\n            \n        # Extract hour from timestamp\n        self.data['hour'] = self.data['timestamp'].dt.hour\n        \n        # Calculate mean temperature for each hour\n        daily_pattern = self.data.groupby('hour')['temperature'].mean()\n        \n        plt.figure(figsize=(10, 6))\n        daily_pattern.plot(kind='bar')\n        plt.title('Average Temperature by Hour')\n        plt.xlabel('Hour of Day')\n        plt.ylabel('Average Temperature (°C)')",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Time Series Analysis with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-timeseries-classes.html#using-our-class",
+    "href": "chapters/02-timeseries-classes.html#using-our-class",
+    "title": "2  Time Series Analysis with Classes",
+    "section": "2.5 Using Our Class",
+    "text": "2.5 Using Our Class\nHere’s how to use the SensorData class:\n# Create a sensor data object\nsensor = SensorData('sensor_data.csv')\n\n# Calculate statistics\nif sensor.is_valid():\n    stats = sensor.calculate_statistics()\n    print(f\"Data Summary:\")\n    print(f\"- Average temperature: {stats['temp_mean']:.1f}°C\")\n    print(f\"- Temperature range: {stats['temp_min']:.1f}°C \"\n          f\"to {stats['temp_max']:.1f}°C\")\n    \n    # Find outliers\n    outliers = sensor.find_outliers()\n    print(f\"\\nFound {len(outliers)} outlier readings\")\n    \n    # Create plots\n    sensor.plot_temperature_trend()\n    plt.savefig('temperature_trend.png')\n    plt.close()\n    \n    sensor.plot_daily_pattern()\n    plt.savefig('daily_pattern.png')\n    plt.close()",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Time Series Analysis with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-timeseries-classes.html#extending-the-class",
+    "href": "chapters/02-timeseries-classes.html#extending-the-class",
+    "title": "2  Time Series Analysis with Classes",
+    "section": "2.6 Extending the Class",
+    "text": "2.6 Extending the Class\nOne advantage of using classes is how easily we can add new features. Let’s add some advanced analysis capabilities:\n    def calculate_trends(self, window_size='1H'):\n        \"\"\"\n        Calculate moving averages for temperature.\n        \n        Example:\n            trends = sensor.calculate_trends(window_size='30min')\n        \"\"\"\n        if not self.is_valid():\n            return None\n            \n        return self.data.resample(window_size, on='timestamp').mean()\n    \n    def get_temperature_range(self, start_time=None, end_time=None):\n        \"\"\"\n        Get temperature data for a specific time range.\n        \n        Example:\n            range_data = sensor.get_temperature_range('2024-01-01', '2024-01-02')\n        \"\"\"\n        if not self.is_valid():\n            return None\n            \n        mask = True\n        if start_time:\n            mask &= (self.data['timestamp'] &gt;= start_time)\n        if end_time:\n            mask &= (self.data['timestamp'] &lt;= end_time)\n            \n        return self.data[mask]",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Time Series Analysis with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-timeseries-classes.html#benefits-of-class-based-approach",
+    "href": "chapters/02-timeseries-classes.html#benefits-of-class-based-approach",
+    "title": "2  Time Series Analysis with Classes",
+    "section": "2.7 Benefits of Class-Based Approach",
+    "text": "2.7 Benefits of Class-Based Approach\n\nState Management: The class maintains its data and calculated statistics\nData Validation: Validation happens automatically before operations\nEncapsulation: Data and methods are bundled together\nExtensibility: Easy to add new features\nCode Organization: Related functionality is grouped together",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Time Series Analysis with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-timeseries-classes.html#comparing-approaches",
+    "href": "chapters/02-timeseries-classes.html#comparing-approaches",
+    "title": "2  Time Series Analysis with Classes",
+    "section": "2.8 Comparing Approaches",
+    "text": "2.8 Comparing Approaches\nLet’s compare the functional and class-based approaches:\n\n\n\n\n\n\n\n\nAspect\nFunctional\nClass-Based\n\n\n\n\nState Management\nPass data between functions\nMaintained by class\n\n\nCode Organization\nSeparate functions\nGrouped in class\n\n\nReusability\nFunctions can be used independently\nMethods tied to class\n\n\nComplexity\nSimpler, more straightforward\nMore structured, scalable",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Time Series Analysis with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-timeseries-classes.html#practice-exercises",
+    "href": "chapters/02-timeseries-classes.html#practice-exercises",
+    "title": "2  Time Series Analysis with Classes",
+    "section": "2.9 Practice Exercises",
+    "text": "2.9 Practice Exercises\n\nBasic: Add a method to calculate the rate of temperature change\nIntermediate: Add a method to detect temperature patterns\nAdvanced: Create a method to compare multiple time periods",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Time Series Analysis with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-timeseries-classes.html#whats-next",
+    "href": "chapters/02-timeseries-classes.html#whats-next",
+    "title": "2  Time Series Analysis with Classes",
+    "section": "2.10 What’s Next",
+    "text": "2.10 What’s Next\nIn the next chapters, we’ll apply these programming approaches to device communication, where we’ll see how each style handles different challenges.",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Time Series Analysis with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-timeseries-classes.html#references",
+    "href": "chapters/02-timeseries-classes.html#references",
+    "title": "2  Time Series Analysis with Classes",
+    "section": "2.11 References",
+    "text": "2.11 References\nFor more information on object-oriented programming in Python, see Beazley and Jones (2013).\n\n\n\n\n\n\nBeazley, David, and Brian K Jones. 2013. Python Cookbook. O’Reilly Media.",
+    "crumbs": [
+      "Time Series Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Time Series Analysis with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#understanding-serial-communication",
+    "href": "chapters/04-device-classes.html#understanding-serial-communication",
+    "title": "4  Device Communication with Functions",
+    "section": "4.2 Understanding Serial Communication",
+    "text": "4.2 Understanding Serial Communication\nBefore we start coding, let’s understand basic serial communication:\nsequenceDiagram\n    participant Computer\n    participant Device\n    Computer-&gt;&gt;Device: Send Command\n    Note right of Device: Process Command\n    Device-&gt;&gt;Computer: Send Response\n    Note left of Computer: Process Response",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#creating-a-mock-serial-device",
+    "href": "chapters/04-device-classes.html#creating-a-mock-serial-device",
+    "title": "4  Device Communication with Functions",
+    "section": "4.3 Creating a Mock Serial Device",
+    "text": "4.3 Creating a Mock Serial Device\nFirst, let’s create a mock serial device that simulates real hardware:\nclass MockSerial:\n    \"\"\"A mock serial device that simulates basic device communication.\"\"\"\n    \n    def __init__(self):\n        self.is_open = False\n        self.temperature = 25.0  # Initial temperature\n        self.buffer = \"\"\n        \n    def open(self):\n        \"\"\"Open the serial connection.\"\"\"\n        self.is_open = True\n        \n    def close(self):\n        \"\"\"Close the serial connection.\"\"\"\n        self.is_open = False\n        \n    def write(self, data):\n        \"\"\"Simulate writing data to device.\"\"\"\n        if not self.is_open:\n            raise IOError(\"Port not open\")\n        self.buffer = data.decode('utf-8').strip()\n        \n    def readline(self):\n        \"\"\"Simulate reading response from device.\"\"\"\n        if not self.is_open:\n            raise IOError(\"Port not open\")\n            \n        # Simulate device responses\n        if self.buffer == \"TEMP?\":\n            response = f\"{self.temperature:.1f}\"\n            # Simulate temperature variation\n            self.temperature += (random.random() - 0.5)\n        elif self.buffer == \"ID?\":\n            response = \"MOCK-DEVICE-001\"\n        elif self.buffer.startswith(\"TEMP:\"):\n            try:\n                self.temperature = float(self.buffer.split(\":\")[1])\n                response = \"OK\"\n            except ValueError:\n                response = \"ERROR: Invalid temperature value\"\n        else:\n            response = \"ERROR: Unknown command\"\n            \n        return (response + \"\\n\").encode('utf-8')",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#communication-functions",
+    "href": "chapters/04-device-classes.html#communication-functions",
+    "title": "4  Device Communication with Functions",
+    "section": "4.4 Communication Functions",
+    "text": "4.4 Communication Functions\nNow let’s create functions to communicate with our device:\ndef open_connection(port='/dev/ttyUSB0', baudrate=9600):\n    \"\"\"\n    Open a connection to the device.\n    \n    Example:\n        device = open_connection('/dev/ttyUSB0')\n    \"\"\"\n    try:\n        # In real code, we would use: serial.Serial(port, baudrate)\n        device = MockSerial()\n        device.open()\n        return device\n    except Exception as e:\n        print(f\"Error opening connection: {e}\")\n        return None\n\ndef close_connection(device):\n    \"\"\"\n    Safely close the device connection.\n    \n    Example:\n        close_connection(device)\n    \"\"\"\n    try:\n        device.close()\n        return True\n    except Exception as e:\n        print(f\"Error closing connection: {e}\")\n        return False\n\ndef send_command(device, command):\n    \"\"\"\n    Send a command to the device and get response.\n    \n    Example:\n        response = send_command(device, \"TEMP?\")\n    \"\"\"\n    try:\n        # Send command\n        device.write(command.encode('utf-8'))\n        \n        # Read response\n        response = device.readline()\n        return response.decode('utf-8').strip()\n    except Exception as e:\n        print(f\"Error sending command: {e}\")\n        return None",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#data-handling-functions",
+    "href": "chapters/04-device-classes.html#data-handling-functions",
+    "title": "4  Device Communication with Functions",
+    "section": "4.5 Data Handling Functions",
+    "text": "4.5 Data Handling Functions\nLet’s add functions to handle specific types of commands and responses:\ndef get_temperature(device):\n    \"\"\"\n    Get current temperature reading.\n    \n    Example:\n        temp = get_temperature(device)\n        print(f\"Temperature: {temp}°C\")\n    \"\"\"\n    response = send_command(device, \"TEMP?\")\n    if response and not response.startswith(\"ERROR\"):\n        try:\n            return float(response)\n        except ValueError:\n            print(\"Error: Invalid temperature format\")\n            return None\n    return None\n\ndef set_temperature(device, temperature):\n    \"\"\"\n    Set target temperature.\n    \n    Example:\n        success = set_temperature(device, 25.0)\n    \"\"\"\n    response = send_command(device, f\"TEMP:{temperature}\")\n    return response == \"OK\"\n\ndef get_device_id(device):\n    \"\"\"\n    Get device identifier.\n    \n    Example:\n        device_id = get_device_id(device)\n    \"\"\"\n    return send_command(device, \"ID?\")",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#error-handling-functions",
+    "href": "chapters/04-device-classes.html#error-handling-functions",
+    "title": "4  Device Communication with Functions",
+    "section": "4.6 Error Handling Functions",
+    "text": "4.6 Error Handling Functions\nLet’s add functions to handle common errors:\ndef check_connection(device):\n    \"\"\"\n    Check if device is responding.\n    \n    Example:\n        if check_connection(device):\n            print(\"Device is connected\")\n    \"\"\"\n    if not device or not device.is_open:\n        return False\n    \n    # Try to get device ID as a connection test\n    response = get_device_id(device)\n    return response is not None and not response.startswith(\"ERROR\")\n\ndef handle_error_response(response):\n    \"\"\"\n    Process error responses from device.\n    \n    Example:\n        if response.startswith(\"ERROR\"):\n            error_msg = handle_error_response(response)\n    \"\"\"\n    if not response.startswith(\"ERROR\"):\n        return None\n        \n    error_codes = {\n        \"ERROR: Unknown command\": \"Invalid command sent to device\",\n        \"ERROR: Invalid temperature value\": \"Temperature value out of range\"\n    }\n    \n    return error_codes.get(response, \"Unknown error occurred\")",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#putting-it-all-together",
+    "href": "chapters/04-device-classes.html#putting-it-all-together",
+    "title": "4  Device Communication with Functions",
+    "section": "4.7 Putting It All Together",
+    "text": "4.7 Putting It All Together\nHere’s how to use all these functions together:\ndef monitor_temperature(duration_seconds=10, interval=1):\n    \"\"\"\n    Monitor temperature for a specified duration.\n    \n    Example:\n        readings = monitor_temperature(duration_seconds=5)\n    \"\"\"\n    device = open_connection()\n    if not device:\n        return None\n        \n    readings = []\n    start_time = time.time()\n    \n    try:\n        while time.time() - start_time &lt; duration_seconds:\n            temp = get_temperature(device)\n            if temp is not None:\n                readings.append((time.time(), temp))\n            time.sleep(interval)\n    finally:\n        close_connection(device)\n        \n    return readings",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#example-usage",
+    "href": "chapters/04-device-classes.html#example-usage",
+    "title": "4  Device Communication with Functions",
+    "section": "4.8 Example Usage",
+    "text": "4.8 Example Usage\nHere’s a complete example of using our functions:\n# Start monitoring\nprint(\"Starting temperature monitoring...\")\nreadings = monitor_temperature(duration_seconds=5)\n\nif readings:\n    print(\"\\nTemperature Readings:\")\n    for timestamp, temp in readings:\n        print(f\"Time: {timestamp:.1f}s, Temperature: {temp:.1f}°C\")\nelse:\n    print(\"Error: Could not collect temperature readings\")",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#benefits-of-functional-approach",
+    "href": "chapters/04-device-classes.html#benefits-of-functional-approach",
+    "title": "4  Device Communication with Functions",
+    "section": "4.9 Benefits of Functional Approach",
+    "text": "4.9 Benefits of Functional Approach\n\nEach function has a clear, single responsibility\nEasy to test individual components\nFunctions can be combined flexibly\nSimple error handling at each step",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#practice-exercises",
+    "href": "chapters/04-device-classes.html#practice-exercises",
+    "title": "4  Device Communication with Functions",
+    "section": "4.10 Practice Exercises",
+    "text": "4.10 Practice Exercises\n\nBasic: Add a function to calculate average temperature over multiple readings\nIntermediate: Create a function to detect if temperature is stable\nAdvanced: Implement a data logging function that saves readings to a file",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#whats-next",
+    "href": "chapters/04-device-classes.html#whats-next",
+    "title": "4  Device Communication with Functions",
+    "section": "4.11 What’s Next",
+    "text": "4.11 What’s Next\nIn the next chapter, we’ll refactor this code into a class-based approach, which will help us manage device state and create a more robust communication interface.",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#references",
+    "href": "chapters/04-device-classes.html#references",
+    "title": "4  Device Communication with Functions",
+    "section": "4.12 References",
+    "text": "4.12 References\nFor more information on serial communication in Python, see pySerial Team (2024).\n\n\n\n\n\n\npySerial Team. 2024. “pySerial Documentation.” 2024. https://pythonhosted.org/pyserial/.",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-api-basics.html#project-setup",
+    "href": "chapters/05-api-basics.html#project-setup",
+    "title": "5  Building a Basic API Server",
+    "section": "5.2 Project Setup",
+    "text": "5.2 Project Setup\nFirst, let’s organize our API server code:\nfrom fastapi import FastAPI, HTTPException\nfrom pydantic import BaseModel\nfrom typing import List, Optional\nimport uvicorn\nimport time\n\n# Import our device interface\nfrom device_interface import DeviceInterface\n\n# Create FastAPI app\napp = FastAPI(\n    title=\"Device Control API\",\n    description=\"API for controlling scientific instruments\",\n    version=\"1.0.0\"\n)\n\n# Store device connection\ndevice = DeviceInterface()",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Building a Basic API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-api-basics.html#basic-data-models",
+    "href": "chapters/05-api-basics.html#basic-data-models",
+    "title": "5  Building a Basic API Server",
+    "section": "5.3 Basic Data Models",
+    "text": "5.3 Basic Data Models\nLet’s define our data models using Pydantic:\nclass TemperatureReading(BaseModel):\n    timestamp: str\n    temperature: float\n\nclass DeviceStatus(BaseModel):\n    connected: bool\n    device_id: Optional[str] = None\n    current_temperature: Optional[float] = None",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Building a Basic API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-api-basics.html#basic-routes",
+    "href": "chapters/05-api-basics.html#basic-routes",
+    "title": "5  Building a Basic API Server",
+    "section": "5.4 Basic Routes",
+    "text": "5.4 Basic Routes\nLet’s create basic endpoints for device control:\n@app.get(\"/status\")\ndef get_status():\n    \"\"\"Get current device status.\"\"\"\n    if not device.connected:\n        return {\"connected\": False}\n        \n    try:\n        return {\n            \"connected\": True,\n            \"device_id\": device.get_device_id(),\n            \"current_temperature\": device.get_temperature()\n        }\n    except Exception as e:\n        raise HTTPException(status_code=500, detail=str(e))\n\n@app.post(\"/connect\")\ndef connect_device():\n    \"\"\"Connect to the device.\"\"\"\n    if device.connected:\n        return {\"message\": \"Already connected\"}\n        \n    if device.connect():\n        return {\"message\": \"Connected successfully\"}\n    else:\n        raise HTTPException(\n            status_code=500, \n            detail=\"Failed to connect to device\"\n        )\n\n@app.post(\"/disconnect\")\ndef disconnect_device():\n    \"\"\"Disconnect from device.\"\"\"\n    if not device.connected:\n        return {\"message\": \"Already disconnected\"}\n        \n    if device.disconnect():\n        return {\"message\": \"Disconnected successfully\"}\n    else:\n        raise HTTPException(\n            status_code=500, \n            detail=\"Failed to disconnect\"\n        )",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Building a Basic API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-api-basics.html#temperature-control-routes",
+    "href": "chapters/05-api-basics.html#temperature-control-routes",
+    "title": "5  Building a Basic API Server",
+    "section": "5.5 Temperature Control Routes",
+    "text": "5.5 Temperature Control Routes\nNow let’s add routes for temperature control:\n@app.get(\"/temperature\")\ndef get_current_temperature():\n    \"\"\"Get current temperature reading.\"\"\"\n    if not device.connected:\n        raise HTTPException(\n            status_code=400, \n            detail=\"Device not connected\"\n        )\n        \n    temp = device.get_temperature()\n    if temp is None:\n        raise HTTPException(\n            status_code=500, \n            detail=\"Failed to read temperature\"\n        )\n        \n    return {\n        \"timestamp\": time.strftime(\"%Y-%m-%d %H:%M:%S\"),\n        \"temperature\": temp\n    }\n\n@app.post(\"/temperature/{value}\")\ndef set_temperature(value: float):\n    \"\"\"Set target temperature.\"\"\"\n    if not device.connected:\n        raise HTTPException(\n            status_code=400, \n            detail=\"Device not connected\"\n        )\n        \n    if device.set_temperature(value):\n        return {\"message\": f\"Temperature set to {value}\"}\n    else:\n        raise HTTPException(\n            status_code=500, \n            detail=\"Failed to set temperature\"\n        )",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Building a Basic API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-api-basics.html#monitoring-routes",
+    "href": "chapters/05-api-basics.html#monitoring-routes",
+    "title": "5  Building a Basic API Server",
+    "section": "5.6 Monitoring Routes",
+    "text": "5.6 Monitoring Routes\nLet’s add routes for temperature monitoring:\n@app.get(\"/monitor/{duration}\")\ndef monitor_temperature(duration: int):\n    \"\"\"Monitor temperature for specified duration.\"\"\"\n    if not device.connected:\n        raise HTTPException(\n            status_code=400, \n            detail=\"Device not connected\"\n        )\n        \n    readings = device.monitor_temperature(duration_seconds=duration)\n    if readings is None:\n        raise HTTPException(\n            status_code=500, \n            detail=\"Monitoring failed\"\n        )\n        \n    return [\n        {\n            \"timestamp\": str(timestamp),\n            \"temperature\": temp\n        }\n        for timestamp, temp in readings\n    ]\n\n@app.get(\"/stability\")\ndef check_stability():\n    \"\"\"Check if temperature is stable.\"\"\"\n    if not device.connected:\n        raise HTTPException(\n            status_code=400, \n            detail=\"Device not connected\"\n        )\n        \n    is_stable = device.check_temperature_stability()\n    return {\n        \"stable\": is_stable,\n        \"timestamp\": time.strftime(\"%Y-%m-%d %H:%M:%S\")\n    }",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Building a Basic API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-api-basics.html#running-the-server",
+    "href": "chapters/05-api-basics.html#running-the-server",
+    "title": "5  Building a Basic API Server",
+    "section": "5.7 Running the Server",
+    "text": "5.7 Running the Server\nHere’s how to run our API server:\nif __name__ == \"__main__\":\n    uvicorn.run(\"main:app\", host=\"0.0.0.0\", port=8000, reload=True)",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Building a Basic API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-api-basics.html#using-the-api",
+    "href": "chapters/05-api-basics.html#using-the-api",
+    "title": "5  Building a Basic API Server",
+    "section": "5.8 Using the API",
+    "text": "5.8 Using the API\nHere are some example API calls using curl:\n# Connect to device\ncurl -X POST http://localhost:8000/connect\n\n# Get current temperature\ncurl http://localhost:8000/temperature\n\n# Monitor temperature for 10 seconds\ncurl http://localhost:8000/monitor/10\n\n# Set temperature\ncurl -X POST http://localhost:8000/temperature/25.5\n\n# Check stability\ncurl http://localhost:8000/stability\n\n# Disconnect\ncurl -X POST http://localhost:8000/disconnect",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Building a Basic API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-api-basics.html#api-documentation",
+    "href": "chapters/05-api-basics.html#api-documentation",
+    "title": "5  Building a Basic API Server",
+    "section": "5.9 API Documentation",
+    "text": "5.9 API Documentation\nFastAPI automatically generates interactive documentation. Visit: - /docs for Swagger UI - /redoc for ReDoc documentation",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Building a Basic API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-api-basics.html#error-handling",
+    "href": "chapters/05-api-basics.html#error-handling",
+    "title": "5  Building a Basic API Server",
+    "section": "5.10 Error Handling",
+    "text": "5.10 Error Handling\nOur API handles common errors: - Device not connected - Invalid commands - Reading errors - Connection issues\nExample error response:\n{\n    \"detail\": \"Device not connected\",\n    \"status_code\": 400\n}",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Building a Basic API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-api-basics.html#benefits-of-fastapi",
+    "href": "chapters/05-api-basics.html#benefits-of-fastapi",
+    "title": "5  Building a Basic API Server",
+    "section": "5.11 Benefits of FastAPI",
+    "text": "5.11 Benefits of FastAPI\n\nAutomatic Documentation:\n\nOpenAPI (Swagger) support\nType checking\nInteractive docs\n\nPerformance:\n\nFast execution\nAsync support\nEfficient validation\n\nDeveloper Experience:\n\nClear error messages\nType hints\nEasy to extend",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Building a Basic API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-api-basics.html#practice-exercises",
+    "href": "chapters/05-api-basics.html#practice-exercises",
+    "title": "5  Building a Basic API Server",
+    "section": "5.12 Practice Exercises",
+    "text": "5.12 Practice Exercises\n\nBasic: Add an endpoint to get device information\nIntermediate: Implement data logging endpoint\nAdvanced: Add authentication to the API",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Building a Basic API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-api-basics.html#whats-next",
+    "href": "chapters/05-api-basics.html#whats-next",
+    "title": "5  Building a Basic API Server",
+    "section": "5.13 What’s Next",
+    "text": "5.13 What’s Next\nIn the next chapter, we’ll enhance our API with: - Authentication - WebSocket support for real-time data - Data persistence - Multiple device management",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Building a Basic API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-api-basics.html#references",
+    "href": "chapters/05-api-basics.html#references",
+    "title": "5  Building a Basic API Server",
+    "section": "5.14 References",
+    "text": "5.14 References\nFor more information on FastAPI, see FastAPI Team (2024).\n\n\n\n\n\n\nFastAPI Team. 2024. “FastAPI Documentation.” 2024. https://fastapi.tiangolo.com/.",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Building a Basic API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-api-complete.html#enhanced-project-structure",
+    "href": "chapters/06-api-complete.html#enhanced-project-structure",
+    "title": "6  Building a Complete API Server",
+    "section": "6.2 Enhanced Project Structure",
+    "text": "6.2 Enhanced Project Structure\nFirst, let’s organize our enhanced API server:\nfrom fastapi import FastAPI, WebSocket, Depends, HTTPException, status\nfrom fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm\nfrom pydantic import BaseModel\nfrom typing import Dict, List, Optional\nimport asyncio\nimport json\nimport time\n\napp = FastAPI(\n    title=\"Advanced Device Control API\",\n    description=\"Production-ready API for device control\",\n    version=\"2.0.0\"\n)",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Building a Complete API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-api-complete.html#device-manager",
+    "href": "chapters/06-api-complete.html#device-manager",
+    "title": "6  Building a Complete API Server",
+    "section": "6.3 Device Manager",
+    "text": "6.3 Device Manager\nLet’s create a class to manage multiple devices:\nclass DeviceManager:\n    def __init__(self):\n        \"\"\"Initialize device manager.\"\"\"\n        self.devices: Dict[str, DeviceInterface] = {}\n        \n    def add_device(self, device_id: str, port: str) -&gt; bool:\n        \"\"\"Add a new device.\"\"\"\n        if device_id in self.devices:\n            return False\n            \n        device = DeviceInterface(port)\n        if device.connect():\n            self.devices[device_id] = device\n            return True\n        return False\n        \n    def remove_device(self, device_id: str) -&gt; bool:\n        \"\"\"Remove a device.\"\"\"\n        if device_id not in self.devices:\n            return False\n            \n        device = self.devices[device_id]\n        device.disconnect()\n        del self.devices[device_id]\n        return True\n        \n    def get_device(self, device_id: str) -&gt; Optional[DeviceInterface]:\n        \"\"\"Get device by ID.\"\"\"\n        return self.devices.get(device_id)\n        \n    def get_all_devices(self) -&gt; List[str]:\n        \"\"\"Get list of all device IDs.\"\"\"\n        return list(self.devices.keys())\n\n# Create device manager instance\ndevice_manager = DeviceManager()",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Building a Complete API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-api-complete.html#authentication",
+    "href": "chapters/06-api-complete.html#authentication",
+    "title": "6  Building a Complete API Server",
+    "section": "6.4 Authentication",
+    "text": "6.4 Authentication\nLet’s implement basic authentication:\nfrom datetime import datetime, timedelta\nfrom jose import JWTError, jwt\nfrom passlib.context import CryptContext\n\n# Security configuration\nSECRET_KEY = \"your-secret-key\"  # In production, use environment variable\nALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 30\n\n# Password hashing\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\n\nclass User(BaseModel):\n    username: str\n    disabled: Optional[bool] = None\n\nclass UserInDB(User):\n    hashed_password: str\n\n# Demo user database - use real database in production\nusers_db = {\n    \"admin\": {\n        \"username\": \"admin\",\n        \"hashed_password\": pwd_context.hash(\"password\"),\n        \"disabled\": False\n    }\n}\n\ndef authenticate_user(username: str, password: str):\n    \"\"\"Authenticate user.\"\"\"\n    user = get_user(username)\n    if not user or not pwd_context.verify(password, user.hashed_password):\n        return False\n    return user\n\ndef create_access_token(data: dict):\n    \"\"\"Create JWT token.\"\"\"\n    expires = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)\n    data.update({\"exp\": expires})\n    return jwt.encode(data, SECRET_KEY, algorithm=ALGORITHM)\n\nasync def get_current_user(token: str = Depends(oauth2_scheme)):\n    \"\"\"Get current user from token.\"\"\"\n    credentials_exception = HTTPException(\n        status_code=status.HTTP_401_UNAUTHORIZED,\n        detail=\"Invalid authentication credentials\",\n        headers={\"WWW-Authenticate\": \"Bearer\"},\n    )\n    try:\n        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])\n        username: str = payload.get(\"sub\")\n        if username is None:\n            raise credentials_exception\n    except JWTError:\n        raise credentials_exception\n    user = get_user(username)\n    if user is None:\n        raise credentials_exception\n    return user",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Building a Complete API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-api-complete.html#websocket-support",
+    "href": "chapters/06-api-complete.html#websocket-support",
+    "title": "6  Building a Complete API Server",
+    "section": "6.5 WebSocket Support",
+    "text": "6.5 WebSocket Support\nLet’s add real-time data streaming:\nclass ConnectionManager:\n    def __init__(self):\n        \"\"\"Initialize connection manager.\"\"\"\n        self.active_connections: Dict[str, List[WebSocket]] = {}\n        \n    async def connect(self, websocket: WebSocket, device_id: str):\n        \"\"\"Connect websocket client.\"\"\"\n        await websocket.accept()\n        if device_id not in self.active_connections:\n            self.active_connections[device_id] = []\n        self.active_connections[device_id].append(websocket)\n        \n    def disconnect(self, websocket: WebSocket, device_id: str):\n        \"\"\"Disconnect websocket client.\"\"\"\n        if device_id in self.active_connections:\n            self.active_connections[device_id].remove(websocket)\n            \n    async def broadcast_temperature(self, device_id: str, data: dict):\n        \"\"\"Broadcast temperature data to all connected clients.\"\"\"\n        if device_id in self.active_connections:\n            for connection in self.active_connections[device_id]:\n                await connection.send_json(data)\n\nmanager = ConnectionManager()\n\n@app.websocket(\"/ws/{device_id}\")\nasync def websocket_endpoint(websocket: WebSocket, device_id: str):\n    \"\"\"WebSocket endpoint for real-time temperature data.\"\"\"\n    await manager.connect(websocket, device_id)\n    try:\n        while True:\n            device = device_manager.get_device(device_id)\n            if device:\n                temp = device.get_temperature()\n                if temp is not None:\n                    data = {\n                        \"timestamp\": time.strftime(\"%Y-%m-%d %H:%M:%S\"),\n                        \"temperature\": temp\n                    }\n                    await manager.broadcast_temperature(device_id, data)\n            await asyncio.sleep(1)\n    except Exception as e:\n        print(f\"WebSocket error: {e}\")\n    finally:\n        manager.disconnect(websocket, device_id)",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Building a Complete API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-api-complete.html#enhanced-api-routes",
+    "href": "chapters/06-api-complete.html#enhanced-api-routes",
+    "title": "6  Building a Complete API Server",
+    "section": "6.6 Enhanced API Routes",
+    "text": "6.6 Enhanced API Routes\nLet’s update our routes with authentication and multiple device support:\n@app.post(\"/device/{device_id}\")\nasync def add_device(\n    device_id: str, \n    port: str, \n    current_user: User = Depends(get_current_user)\n):\n    \"\"\"Add a new device.\"\"\"\n    if device_manager.add_device(device_id, port):\n        return {\"message\": f\"Device {device_id} added successfully\"}\n    raise HTTPException(\n        status_code=400,\n        detail=\"Failed to add device\"\n    )\n\n@app.get(\"/devices\")\nasync def list_devices(current_user: User = Depends(get_current_user)):\n    \"\"\"List all devices.\"\"\"\n    return {\"devices\": device_manager.get_all_devices()}\n\n@app.get(\"/device/{device_id}/temperature\")\nasync def get_device_temperature(\n    device_id: str,\n    current_user: User = Depends(get_current_user)\n):\n    \"\"\"Get temperature from specific device.\"\"\"\n    device = device_manager.get_device(device_id)\n    if not device:\n        raise HTTPException(\n            status_code=404,\n            detail=\"Device not found\"\n        )\n        \n    temp = device.get_temperature()\n    if temp is None:\n        raise HTTPException(\n            status_code=500,\n            detail=\"Failed to read temperature\"\n        )\n        \n    return {\n        \"device_id\": device_id,\n        \"timestamp\": time.strftime(\"%Y-%m-%d %H:%M:%S\"),\n        \"temperature\": temp\n    }",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Building a Complete API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-api-complete.html#data-logging",
+    "href": "chapters/06-api-complete.html#data-logging",
+    "title": "6  Building a Complete API Server",
+    "section": "6.7 Data Logging",
+    "text": "6.7 Data Logging\nLet’s add data logging functionality:\nimport sqlite3\nfrom datetime import datetime\n\nclass DataLogger:\n    def __init__(self, db_path=\"device_data.db\"):\n        \"\"\"Initialize data logger.\"\"\"\n        self.db_path = db_path\n        self.init_db()\n        \n    def init_db(self):\n        \"\"\"Initialize database.\"\"\"\n        conn = sqlite3.connect(self.db_path)\n        c = conn.cursor()\n        c.execute('''\n            CREATE TABLE IF NOT EXISTS temperature_logs\n            (device_id TEXT, timestamp TEXT, temperature REAL)\n        ''')\n        conn.commit()\n        conn.close()\n        \n    def log_temperature(self, device_id: str, temperature: float):\n        \"\"\"Log temperature reading.\"\"\"\n        conn = sqlite3.connect(self.db_path)\n        c = conn.cursor()\n        timestamp = datetime.now().isoformat()\n        c.execute(\n            \"INSERT INTO temperature_logs VALUES (?, ?, ?)\",\n            (device_id, timestamp, temperature)\n        )\n        conn.commit()\n        conn.close()\n        \n    def get_device_history(\n        self, \n        device_id: str, \n        limit: int = 100\n    ) -&gt; List[dict]:\n        \"\"\"Get temperature history for device.\"\"\"\n        conn = sqlite3.connect(self.db_path)\n        c = conn.cursor()\n        c.execute(\n            \"\"\"\n            SELECT * FROM temperature_logs \n            WHERE device_id = ? \n            ORDER BY timestamp DESC \n            LIMIT ?\n            \"\"\",\n            (device_id, limit)\n        )\n        rows = c.fetchall()\n        conn.close()\n        \n        return [\n            {\n                \"device_id\": row[0],\n                \"timestamp\": row[1],\n                \"temperature\": row[2]\n            }\n            for row in rows\n        ]\n\n# Create data logger instance\ndata_logger = DataLogger()",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Building a Complete API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-api-complete.html#using-the-enhanced-api",
+    "href": "chapters/06-api-complete.html#using-the-enhanced-api",
+    "title": "6  Building a Complete API Server",
+    "section": "6.8 Using the Enhanced API",
+    "text": "6.8 Using the Enhanced API\nHere’s how to use the enhanced API:\n# Example client code\nimport requests\nimport websockets\nimport asyncio\nimport json\n\n# Get access token\nresponse = requests.post(\n    \"http://localhost:8000/token\",\n    data={\"username\": \"admin\", \"password\": \"password\"}\n)\ntoken = response.json()[\"access_token\"]\n\n# Add device\nheaders = {\"Authorization\": f\"Bearer {token}\"}\nresponse = requests.post(\n    \"http://localhost:8000/device/dev1\",\n    headers=headers,\n    params={\"port\": \"/dev/ttyUSB0\"}\n)\n\n# WebSocket client for real-time data\nasync def temperature_monitor():\n    uri = \"ws://localhost:8000/ws/dev1\"\n    async with websockets.connect(uri) as websocket:\n        while True:\n            data = await websocket.recv()\n            print(f\"Temperature: {json.loads(data)}\")\n\n# Run WebSocket client\nasyncio.get_event_loop().run_until_complete(temperature_monitor())",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Building a Complete API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-api-complete.html#benefits-of-enhanced-api",
+    "href": "chapters/06-api-complete.html#benefits-of-enhanced-api",
+    "title": "6  Building a Complete API Server",
+    "section": "6.9 Benefits of Enhanced API",
+    "text": "6.9 Benefits of Enhanced API\n\nSecurity:\n\nAuthentication\nToken-based access\nProtected endpoints\n\nReal-time Data:\n\nWebSocket support\nEfficient data streaming\nMultiple client support\n\nScalability:\n\nMultiple device management\nData persistence\nConnection management",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Building a Complete API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-api-complete.html#practice-exercises",
+    "href": "chapters/06-api-complete.html#practice-exercises",
+    "title": "6  Building a Complete API Server",
+    "section": "6.10 Practice Exercises",
+    "text": "6.10 Practice Exercises\n\nBasic: Add user management endpoints\nIntermediate: Implement device configuration persistence\nAdvanced: Add data export functionality",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Building a Complete API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-api-complete.html#whats-next",
+    "href": "chapters/06-api-complete.html#whats-next",
+    "title": "6  Building a Complete API Server",
+    "section": "6.11 What’s Next",
+    "text": "6.11 What’s Next\nYou’ve now built a complete, production-ready API server. Next steps might include: - Adding more security features - Implementing device discovery - Creating a web interface - Adding data analysis features",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Building a Complete API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-api-complete.html#references",
+    "href": "chapters/06-api-complete.html#references",
+    "title": "6  Building a Complete API Server",
+    "section": "6.12 References",
+    "text": "6.12 References\nFor more information on FastAPI features, see FastAPI Team (2024).\n\n\n\n\n\n\nFastAPI Team. 2024. “FastAPI Documentation.” 2024. https://fastapi.tiangolo.com/.",
+    "crumbs": [
+      "Building APIs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Building a Complete API Server</span>"
+    ]
+  }
+]

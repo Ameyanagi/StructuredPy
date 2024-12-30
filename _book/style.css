@@ -1,0 +1,56 @@
+/* Code blocks */
+div.sourceCode {
+    margin-bottom: 1.5em;
+    border-radius: 5px;
+}
+
+/* Chapter headers */
+h1.title {
+    color: #2c3e50;
+    border-bottom: 2px solid #eaecef;
+    padding-bottom: 0.3em;
+}
+
+/* Quiz boxes */
+.quiz {
+    background-color: #f8f9fa;
+    border-left: 4px solid #0366d6;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+/* Notes and warnings */
+.note {
+    background-color: #f1f8ff;
+    border-left: 4px solid #0366d6;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+.warning {
+    background-color: #fff5f7;
+    border-left: 4px solid #d73a49;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+/* Practice exercises */
+.exercise {
+    background-color: #f6f8fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.5rem;
+    border: 1px solid #dee2e6;
+}
