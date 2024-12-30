@@ -1,0 +1,252 @@
+# Time Series Analysis with Classes
+
+## Introduction
+
+In the previous chapter, we used functions to analyze sensor data. Now, we'll reorganize the same functionality using a class-based approach. This will help us:
+- Keep related data and functions together
+- Maintain analysis state
+- Make the code more reusable
+- Add more complex features easily
+
+## Creating Our Sensor Data Class
+
+Let's start by creating a class to handle our sensor data:
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+from datetime import datetime
+
+class SensorData:
+    def __init__(self, filepath=None):
+        """
+        Initialize SensorData object.
+        
+        Example:
+            sensor = SensorData('sensor_data.csv')
+        """
+        self.data = None
+        self.stats = None
+        
+        if filepath:
+            self.load_data(filepath)
+    
+    def load_data(self, filepath):
+        """Load data from CSV file."""
+        try:
+            self.data = pd.read_csv(filepath)
+            self.data['timestamp'] = pd.to_datetime(self.data['timestamp'])
+            return True
+        except FileNotFoundError:
+            print(f"Error: File {filepath} not found")
+            return False
+        except Exception as e:
+            print(f"Error loading data: {e}")
+            return False
+    
+    def is_valid(self):
+        """Check if data is valid."""
+        if self.data is None:
+            return False
+            
+        required_columns = ['timestamp', 'temperature', 'humidity']
+        has_columns = all(col in self.data.columns for col in required_columns)
+        
+        if not has_columns:
+            print("Error: Missing required columns")
+            return False
+            
+        if self.data.isnull().any().any():
+            print("Warning: Data contains missing values")
+            
+        return True
+```
+
+## Adding Analysis Methods
+
+Now let's add methods for data analysis:
+
+```python
+    def calculate_statistics(self):
+        """
+        Calculate basic statistics for the sensor data.
+        
+        Example:
+            sensor.calculate_statistics()
+            print(f"Average temp: {sensor.stats['temp_mean']:.1f}°C")
+        """
+        if not self.is_valid():
+            return None
+            
+        self.stats = {
+            'temp_mean': self.data['temperature'].mean(),
+            'temp_max': self.data['temperature'].max(),
+            'temp_min': self.data['temperature'].min(),
+            'humid_mean': self.data['humidity'].mean(),
+            'readings_count': len(self.data)
+        }
+        return self.stats
+    
+    def find_outliers(self, std_threshold=3):
+        """
+        Find outlier readings based on standard deviation.
+        
+        Example:
+            outliers = sensor.find_outliers(std_threshold=2)
+        """
+        if not self.is_valid():
+            return None
+            
+        temp_mean = self.data['temperature'].mean()
+        temp_std = self.data['temperature'].std()
+        
+        return self.data[
+            abs(self.data['temperature'] - temp_mean) > std_threshold * temp_std
+        ]
+```
+
+## Adding Visualization Methods
+
+Let's add methods for creating visualizations:
+
+```python
+    def plot_temperature_trend(self):
+        """
+        Plot temperature over time.
+        
+        Example:
+            sensor.plot_temperature_trend()
+            plt.show()
+        """
+        if not self.is_valid():
+            return
+            
+        plt.figure(figsize=(12, 6))
+        plt.plot(self.data['timestamp'], self.data['temperature'])
+        plt.title('Temperature Over Time')
+        plt.xlabel('Time')
+        plt.ylabel('Temperature (°C)')
+        plt.grid(True)
+    
+    def plot_daily_pattern(self):
+        """
+        Plot average temperature by hour.
+        
+        Example:
+            sensor.plot_daily_pattern()
+            plt.show()
+        """
+        if not self.is_valid():
+            return
+            
+        # Extract hour from timestamp
+        self.data['hour'] = self.data['timestamp'].dt.hour
+        
+        # Calculate mean temperature for each hour
+        daily_pattern = self.data.groupby('hour')['temperature'].mean()
+        
+        plt.figure(figsize=(10, 6))
+        daily_pattern.plot(kind='bar')
+        plt.title('Average Temperature by Hour')
+        plt.xlabel('Hour of Day')
+        plt.ylabel('Average Temperature (°C)')
+```
+
+## Using Our Class
+
+Here's how to use the SensorData class:
+
+```python
+# Create a sensor data object
+sensor = SensorData('sensor_data.csv')
+
+# Calculate statistics
+if sensor.is_valid():
+    stats = sensor.calculate_statistics()
+    print(f"Data Summary:")
+    print(f"- Average temperature: {stats['temp_mean']:.1f}°C")
+    print(f"- Temperature range: {stats['temp_min']:.1f}°C "
+          f"to {stats['temp_max']:.1f}°C")
+    
+    # Find outliers
+    outliers = sensor.find_outliers()
+    print(f"\nFound {len(outliers)} outlier readings")
+    
+    # Create plots
+    sensor.plot_temperature_trend()
+    plt.savefig('temperature_trend.png')
+    plt.close()
+    
+    sensor.plot_daily_pattern()
+    plt.savefig('daily_pattern.png')
+    plt.close()
+```
+
+## Extending the Class
+
+One advantage of using classes is how easily we can add new features. Let's add some advanced analysis capabilities:
+
+```python
+    def calculate_trends(self, window_size='1H'):
+        """
+        Calculate moving averages for temperature.
+        
+        Example:
+            trends = sensor.calculate_trends(window_size='30min')
+        """
+        if not self.is_valid():
+            return None
+            
+        return self.data.resample(window_size, on='timestamp').mean()
+    
+    def get_temperature_range(self, start_time=None, end_time=None):
+        """
+        Get temperature data for a specific time range.
+        
+        Example:
+            range_data = sensor.get_temperature_range('2024-01-01', '2024-01-02')
+        """
+        if not self.is_valid():
+            return None
+            
+        mask = True
+        if start_time:
+            mask &= (self.data['timestamp'] >= start_time)
+        if end_time:
+            mask &= (self.data['timestamp'] <= end_time)
+            
+        return self.data[mask]
+```
+
+## Benefits of Class-Based Approach
+
+1. **State Management**: The class maintains its data and calculated statistics
+2. **Data Validation**: Validation happens automatically before operations
+3. **Encapsulation**: Data and methods are bundled together
+4. **Extensibility**: Easy to add new features
+5. **Code Organization**: Related functionality is grouped together
+
+## Comparing Approaches
+
+Let's compare the functional and class-based approaches:
+
+| Aspect | Functional | Class-Based |
+|--------|------------|-------------|
+| State Management | Pass data between functions | Maintained by class |
+| Code Organization | Separate functions | Grouped in class |
+| Reusability | Functions can be used independently | Methods tied to class |
+| Complexity | Simpler, more straightforward | More structured, scalable |
+
+## Practice Exercises
+
+1. **Basic**: Add a method to calculate the rate of temperature change
+2. **Intermediate**: Add a method to detect temperature patterns
+3. **Advanced**: Create a method to compare multiple time periods
+
+## What's Next
+
+In the next chapters, we'll apply these programming approaches to device communication, where we'll see how each style handles different challenges.
+
+## References
+
+For more information on object-oriented programming in Python, see @python_cookbook.

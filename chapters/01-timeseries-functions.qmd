@@ -1,0 +1,240 @@
+# Time Series Analysis with Functions
+
+## Introduction
+
+In this chapter, we'll analyze time series data from sensors using Python functions. We'll build a series of focused functions that can:
+
+- Load and validate sensor data
+- Calculate basic statistics
+- Find patterns in the data
+- Create meaningful visualizations
+
+## Project Overview
+
+We'll work with temperature sensor data that looks like this:
+
+```csv
+timestamp,temperature,humidity
+2024-01-01 00:00:00,22.5,45
+2024-01-01 00:01:00,22.6,46
+2024-01-01 00:02:00,22.4,45
+```
+
+This data represents temperature and humidity readings taken every minute. Our goal is to create functions that help us understand this data.
+
+## Starting with Basic Functions
+
+Let's begin by creating functions to load and check our data:
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+from datetime import datetime
+
+def load_sensor_data(filepath):
+    """
+    Load sensor data from a CSV file.
+    
+    Example:
+        data = load_sensor_data('sensor_data.csv')
+    """
+    try:
+        # Read CSV file with pandas
+        data = pd.read_csv(filepath)
+        
+        # Convert timestamp string to datetime
+        data['timestamp'] = pd.to_datetime(data['timestamp'])
+        
+        return data
+    except FileNotFoundError:
+        print(f"Error: File {filepath} not found")
+        return None
+    except Exception as e:
+        print(f"Error loading data: {e}")
+        return None
+
+def check_data_quality(data):
+    """
+    Check if data has required columns and valid values.
+    
+    Example:
+        is_valid = check_data_quality(data)
+    """
+    # Check required columns
+    required_columns = ['timestamp', 'temperature', 'humidity']
+    has_columns = all(col in data.columns for col in required_columns)
+    
+    if not has_columns:
+        print("Error: Missing required columns")
+        return False
+    
+    # Check for missing values
+    if data.isnull().any().any():
+        print("Warning: Data contains missing values")
+        
+    return True
+```
+
+## Analysis Functions
+
+Now let's create functions to analyze our data:
+
+```python
+def calculate_basic_stats(data):
+    """
+    Calculate basic statistics for temperature and humidity.
+    
+    Example:
+        stats = calculate_basic_stats(data)
+        print(f"Average temperature: {stats['temp_mean']:.1f}°C")
+    """
+    stats = {
+        'temp_mean': data['temperature'].mean(),
+        'temp_max': data['temperature'].max(),
+        'temp_min': data['temperature'].min(),
+        'humid_mean': data['humidity'].mean(),
+        'readings_count': len(data)
+    }
+    return stats
+
+def find_outliers(data, std_threshold=3):
+    """
+    Find outlier readings based on standard deviation.
+    
+    Example:
+        outliers = find_outliers(data, std_threshold=2)
+    """
+    temp_mean = data['temperature'].mean()
+    temp_std = data['temperature'].std()
+    
+    outliers = data[
+        abs(data['temperature'] - temp_mean) > std_threshold * temp_std
+    ]
+    
+    return outliers
+```
+
+## Visualization Functions
+
+Adding functions to visualize our data:
+
+```python
+def plot_temperature_trend(data):
+    """
+    Create a line plot of temperature over time.
+    
+    Example:
+        plot_temperature_trend(data)
+        plt.show()
+    """
+    plt.figure(figsize=(12, 6))
+    plt.plot(data['timestamp'], data['temperature'])
+    plt.title('Temperature Over Time')
+    plt.xlabel('Time')
+    plt.ylabel('Temperature (°C)')
+    plt.grid(True)
+    
+def plot_daily_pattern(data):
+    """
+    Show average temperature pattern by hour of day.
+    
+    Example:
+        plot_daily_pattern(data)
+        plt.show()
+    """
+    # Extract hour from timestamp
+    data['hour'] = data['timestamp'].dt.hour
+    
+    # Calculate mean temperature for each hour
+    daily_pattern = data.groupby('hour')['temperature'].mean()
+    
+    plt.figure(figsize=(10, 6))
+    daily_pattern.plot(kind='bar')
+    plt.title('Average Temperature by Hour')
+    plt.xlabel('Hour of Day')
+    plt.ylabel('Average Temperature (°C)')
+```
+
+## Putting It All Together
+
+Let's create a function that uses all our analysis tools:
+
+```python
+def analyze_sensor_data(filepath):
+    """
+    Perform complete analysis of sensor data.
+    
+    Example:
+        results = analyze_sensor_data('sensor_data.csv')
+    """
+    # Load data
+    data = load_sensor_data(filepath)
+    if data is None:
+        return None
+    
+    # Check data quality
+    if not check_data_quality(data):
+        return None
+    
+    # Perform analysis
+    results = {
+        'statistics': calculate_basic_stats(data),
+        'outliers': find_outliers(data),
+    }
+    
+    # Create visualizations
+    plot_temperature_trend(data)
+    plt.savefig('temperature_trend.png')
+    plt.close()
+    
+    plot_daily_pattern(data)
+    plt.savefig('daily_pattern.png')
+    plt.close()
+    
+    return results
+```
+
+## Using Our Functions
+
+Here's how to use the functions we created:
+
+```python
+# Load and analyze data
+filepath = "sensor_data.csv"
+results = analyze_sensor_data(filepath)
+
+if results:
+    # Print statistics
+    stats = results['statistics']
+    print(f"Data Summary:")
+    print(f"- Average temperature: {stats['temp_mean']:.1f}°C")
+    print(f"- Temperature range: {stats['temp_min']:.1f}°C to {stats['temp_max']:.1f}°C")
+    print(f"- Number of readings: {stats['readings_count']}")
+    
+    # Report outliers
+    outliers = results['outliers']
+    print(f"\nFound {len(outliers)} outlier readings")
+```
+
+## Benefits of Functional Approach
+
+Our functional approach has several advantages:
+
+1. Each function has a single, clear purpose
+2. Functions can be tested independently
+3. Easy to add new analysis features
+4. Code is reusable across different projects
+
+## Practice Exercises
+
+1. **Basic**: Create a function to calculate the temperature change rate between readings.
+2. **Intermediate**: Add a function to detect sudden temperature spikes.
+3. **Advanced**: Create a function to identify daily temperature patterns.
+
+## What's Next
+
+In the next chapter, we'll see how to organize this same functionality using classes, which will help us manage more complex analysis requirements.
+
+## References
+
+For more information on time series analysis with Python, see @time_series_python.

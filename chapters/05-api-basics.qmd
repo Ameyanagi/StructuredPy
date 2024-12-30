@@ -1,0 +1,277 @@
+# Building a Basic API Server
+
+## Introduction
+
+In this chapter, we'll create a web API that allows remote access to our devices. We'll use FastAPI to:
+- Create HTTP endpoints for device control
+- Handle device connections
+- Provide real-time data access
+- Document our API automatically
+
+## Project Setup
+
+First, let's organize our API server code:
+
+```python
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import List, Optional
+import uvicorn
+import time
+
+# Import our device interface
+from device_interface import DeviceInterface
+
+# Create FastAPI app
+app = FastAPI(
+    title="Device Control API",
+    description="API for controlling scientific instruments",
+    version="1.0.0"
+)
+
+# Store device connection
+device = DeviceInterface()
+```
+
+## Basic Data Models
+
+Let's define our data models using Pydantic:
+
+```python
+class TemperatureReading(BaseModel):
+    timestamp: str
+    temperature: float
+
+class DeviceStatus(BaseModel):
+    connected: bool
+    device_id: Optional[str] = None
+    current_temperature: Optional[float] = None
+```
+
+## Basic Routes
+
+Let's create basic endpoints for device control:
+
+```python
+@app.get("/status")
+def get_status():
+    """Get current device status."""
+    if not device.connected:
+        return {"connected": False}
+        
+    try:
+        return {
+            "connected": True,
+            "device_id": device.get_device_id(),
+            "current_temperature": device.get_temperature()
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/connect")
+def connect_device():
+    """Connect to the device."""
+    if device.connected:
+        return {"message": "Already connected"}
+        
+    if device.connect():
+        return {"message": "Connected successfully"}
+    else:
+        raise HTTPException(
+            status_code=500, 
+            detail="Failed to connect to device"
+        )
+
+@app.post("/disconnect")
+def disconnect_device():
+    """Disconnect from device."""
+    if not device.connected:
+        return {"message": "Already disconnected"}
+        
+    if device.disconnect():
+        return {"message": "Disconnected successfully"}
+    else:
+        raise HTTPException(
+            status_code=500, 
+            detail="Failed to disconnect"
+        )
+```
+
+## Temperature Control Routes
+
+Now let's add routes for temperature control:
+
+```python
+@app.get("/temperature")
+def get_current_temperature():
+    """Get current temperature reading."""
+    if not device.connected:
+        raise HTTPException(
+            status_code=400, 
+            detail="Device not connected"
+        )
+        
+    temp = device.get_temperature()
+    if temp is None:
+        raise HTTPException(
+            status_code=500, 
+            detail="Failed to read temperature"
+        )
+        
+    return {
+        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "temperature": temp
+    }
+
+@app.post("/temperature/{value}")
+def set_temperature(value: float):
+    """Set target temperature."""
+    if not device.connected:
+        raise HTTPException(
+            status_code=400, 
+            detail="Device not connected"
+        )
+        
+    if device.set_temperature(value):
+        return {"message": f"Temperature set to {value}"}
+    else:
+        raise HTTPException(
+            status_code=500, 
+            detail="Failed to set temperature"
+        )
+```
+
+## Monitoring Routes
+
+Let's add routes for temperature monitoring:
+
+```python
+@app.get("/monitor/{duration}")
+def monitor_temperature(duration: int):
+    """Monitor temperature for specified duration."""
+    if not device.connected:
+        raise HTTPException(
+            status_code=400, 
+            detail="Device not connected"
+        )
+        
+    readings = device.monitor_temperature(duration_seconds=duration)
+    if readings is None:
+        raise HTTPException(
+            status_code=500, 
+            detail="Monitoring failed"
+        )
+        
+    return [
+        {
+            "timestamp": str(timestamp),
+            "temperature": temp
+        }
+        for timestamp, temp in readings
+    ]
+
+@app.get("/stability")
+def check_stability():
+    """Check if temperature is stable."""
+    if not device.connected:
+        raise HTTPException(
+            status_code=400, 
+            detail="Device not connected"
+        )
+        
+    is_stable = device.check_temperature_stability()
+    return {
+        "stable": is_stable,
+        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+    }
+```
+
+## Running the Server
+
+Here's how to run our API server:
+
+```python
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+```
+
+## Using the API
+
+Here are some example API calls using curl:
+
+```bash
+# Connect to device
+curl -X POST http://localhost:8000/connect
+
+# Get current temperature
+curl http://localhost:8000/temperature
+
+# Monitor temperature for 10 seconds
+curl http://localhost:8000/monitor/10
+
+# Set temperature
+curl -X POST http://localhost:8000/temperature/25.5
+
+# Check stability
+curl http://localhost:8000/stability
+
+# Disconnect
+curl -X POST http://localhost:8000/disconnect
+```
+
+## API Documentation
+
+FastAPI automatically generates interactive documentation. Visit:
+- `/docs` for Swagger UI
+- `/redoc` for ReDoc documentation
+
+## Error Handling
+
+Our API handles common errors:
+- Device not connected
+- Invalid commands
+- Reading errors
+- Connection issues
+
+Example error response:
+```json
+{
+    "detail": "Device not connected",
+    "status_code": 400
+}
+```
+
+## Benefits of FastAPI
+
+1. **Automatic Documentation**:
+   - OpenAPI (Swagger) support
+   - Type checking
+   - Interactive docs
+
+2. **Performance**:
+   - Fast execution
+   - Async support
+   - Efficient validation
+
+3. **Developer Experience**:
+   - Clear error messages
+   - Type hints
+   - Easy to extend
+
+## Practice Exercises
+
+1. **Basic**: Add an endpoint to get device information
+2. **Intermediate**: Implement data logging endpoint
+3. **Advanced**: Add authentication to the API
+
+## What's Next
+
+In the next chapter, we'll enhance our API with:
+- Authentication
+- WebSocket support for real-time data
+- Data persistence
+- Multiple device management
+
+## References
+
+For more information on FastAPI, see @fastapi_docs.

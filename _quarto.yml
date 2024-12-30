@@ -1,0 +1,75 @@
+project:
+  type: book
+
+book:
+  title: "StructuredPy: Master Python through Objects and Functions"
+  author: "Ameyanagi"
+  date: last-modified
+  search: true
+  repo-url: https://github.com/Ameyanagi/StructuredPy
+  repo-actions: [edit, issue]
+  downloads: [pdf, epub]
+  sharing: [twitter, linkedin]
+  
+  chapters:
+    - index.qmd
+    - preface.qmd
+    
+    - part: "Time Series Analysis"
+      chapters:
+        - chapters/01-timeseries-functions.qmd
+        - chapters/02-timeseries-classes.qmd
+    
+    - part: "Device Communication"
+      chapters:
+        - chapters/03-device-functions.qmd
+        - chapters/04-device-classes.qmd
+    
+    - part: "Building APIs"
+      chapters:
+        - chapters/05-api-basics.qmd
+        - chapters/06-api-complete.qmd
+    
+    - part: "Appendices"
+      chapters:
+        - appendices/python_basics.qmd
+        - appendices/setup_guide.qmd
+        - appendices/resources.qmd
+
+  sidebar:
+    style: docked
+    tools:
+      - icon: house-fill
+        href: index.qmd
+      - icon: github
+        href: https://github.com/Ameyanagi/StructuredPy
+
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    code-copy: true
+    code-tools: true
+    highlight-style: github
+    html-math-method: katex
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="/style.css">
+  
+  pdf:
+    documentclass: scrreprt
+    code-line-numbers: true
+
+# csl: ieee.csl
+
+execute:
+  freeze: auto
+  warning: false
+  message: false
+
+filters:
+  - include-code-files
+
+

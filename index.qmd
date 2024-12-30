@@ -1,0 +1,110 @@
+# Welcome to StructuredPy {.unnumbered}
+
+Welcome to StructuredPy, a practical guide to building well-structured Python applications. This book takes a hands-on approach to learning Python through real-world projects, focusing on both functional and object-oriented programming approaches.
+
+## Who This Book Is For
+
+This book is designed for:
+
+- Python beginners who understand basic syntax and want to write better code
+- Programmers transitioning to Python from other languages
+- Anyone interested in building practical Python applications
+
+## What You'll Build
+
+Throughout this book, you'll work on three main projects:
+
+1. **Time Series Data Analysis**
+   - Analyze sensor data using both functions and classes
+   - Learn data processing techniques
+   - Visualize time series data
+
+2. **Device Communication**
+   - Build a mock serial communication system
+   - Handle device commands and responses
+   - Manage device state and errors
+
+3. **API Development**
+   - Create a FastAPI server
+   - Connect devices through web APIs
+   - Build a complete application
+
+Each project is presented twice: first using functions, then using classes. This approach helps you understand when to use each style and how to combine them effectively.
+
+## How to Use This Book
+
+### Project-Based Learning
+
+Each chapter focuses on building something practical. We start with a problem, break it down into manageable pieces, and build a solution step by step.
+
+### Code Examples
+
+All code examples are available in the `code` directory. For each project, you'll find:
+
+```
+code/
+├── timeseries/
+├── device/
+└── api/
+```
+
+### Exercises and Practice
+
+Each chapter includes:
+- Hands-on exercises
+- Code challenges
+- Suggestions for extending the projects
+
+## Prerequisites
+
+To get the most out of this book, you should:
+
+- Know basic Python syntax (variables, loops, conditionals)
+- Have Python installed on your computer
+- Be comfortable using a text editor or IDE
+- Have a basic understanding of the command line
+
+If you need to review Python basics, check the appendix for a quick reference.
+
+## Getting Started
+
+1. Clone the book's repository:
+   ```bash
+   git clone https://github.com/Ameyanagi/StructuredPy
+   ```
+
+2. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Start with Chapter 1 and follow along with the code examples.
+
+## What Makes This Book Different
+
+Instead of teaching Python concepts in isolation, this book:
+
+- Shows both functional and object-oriented approaches
+- Uses real-world examples
+- Focuses on writing maintainable code
+- Demonstrates practical project organization
+
+## Navigation
+
+- Use the sidebar to navigate between chapters
+- Code examples can be copied directly from the book
+- Projects build on each other progressively
+
+Let's begin by analyzing time series data in Chapter 1!
+
+## Acknowledgments {.unnumbered}
+
+Thanks to all contributors and reviewers who helped improve this book.
+
+## Contributing {.unnumbered}
+
+Found a mistake or want to improve the book? Visit the [GitHub repository](https://github.com/yourusername/structuredpy) to:
+
+- Report issues
+- Suggest improvements
+- Contribute content
