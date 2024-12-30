@@ -1,0 +1,280 @@
+# Device Communication with Functions
+
+## Introduction
+
+In this chapter, we'll build a mock serial communication system that simulates interaction with a scientific instrument. We'll create functions to:
+- Send commands to the device
+- Read responses
+- Handle errors
+- Parse data
+
+This will help you understand how to communicate with real hardware devices while practicing in a safe, simulated environment.
+
+## Understanding Serial Communication
+
+Before we start coding, let's understand basic serial communication:
+
+```{mermaid}
+sequenceDiagram
+    participant Computer
+    participant Device
+    Computer->>Device: Send Command
+    Note right of Device: Process Command
+    Device->>Computer: Send Response
+    Note left of Computer: Process Response
+```
+
+## Creating a Mock Serial Device
+
+First, let's create a mock serial device that simulates real hardware:
+
+```python
+class MockSerial:
+    """A mock serial device that simulates basic device communication."""
+    
+    def __init__(self):
+        self.is_open = False
+        self.temperature = 25.0  # Initial temperature
+        self.buffer = ""
+        
+    def open(self):
+        """Open the serial connection."""
+        self.is_open = True
+        
+    def close(self):
+        """Close the serial connection."""
+        self.is_open = False
+        
+    def write(self, data):
+        """Simulate writing data to device."""
+        if not self.is_open:
+            raise IOError("Port not open")
+        self.buffer = data.decode('utf-8').strip()
+        
+    def readline(self):
+        """Simulate reading response from device."""
+        if not self.is_open:
+            raise IOError("Port not open")
+            
+        # Simulate device responses
+        if self.buffer == "TEMP?":
+            response = f"{self.temperature:.1f}"
+            # Simulate temperature variation
+            self.temperature += (random.random() - 0.5)
+        elif self.buffer == "ID?":
+            response = "MOCK-DEVICE-001"
+        elif self.buffer.startswith("TEMP:"):
+            try:
+                self.temperature = float(self.buffer.split(":")[1])
+                response = "OK"
+            except ValueError:
+                response = "ERROR: Invalid temperature value"
+        else:
+            response = "ERROR: Unknown command"
+            
+        return (response + "\n").encode('utf-8')
+```
+
+## Communication Functions
+
+Now let's create functions to communicate with our device:
+
+```python
+def open_connection(port='/dev/ttyUSB0', baudrate=9600):
+    """
+    Open a connection to the device.
+    
+    Example:
+        device = open_connection('/dev/ttyUSB0')
+    """
+    try:
+        # In real code, we would use: serial.Serial(port, baudrate)
+        device = MockSerial()
+        device.open()
+        return device
+    except Exception as e:
+        print(f"Error opening connection: {e}")
+        return None
+
+def close_connection(device):
+    """
+    Safely close the device connection.
+    
+    Example:
+        close_connection(device)
+    """
+    try:
+        device.close()
+        return True
+    except Exception as e:
+        print(f"Error closing connection: {e}")
+        return False
+
+def send_command(device, command):
+    """
+    Send a command to the device and get response.
+    
+    Example:
+        response = send_command(device, "TEMP?")
+    """
+    try:
+        # Send command
+        device.write(command.encode('utf-8'))
+        
+        # Read response
+        response = device.readline()
+        return response.decode('utf-8').strip()
+    except Exception as e:
+        print(f"Error sending command: {e}")
+        return None
+```
+
+## Data Handling Functions
+
+Let's add functions to handle specific types of commands and responses:
+
+```python
+def get_temperature(device):
+    """
+    Get current temperature reading.
+    
+    Example:
+        temp = get_temperature(device)
+        print(f"Temperature: {temp}°C")
+    """
+    response = send_command(device, "TEMP?")
+    if response and not response.startswith("ERROR"):
+        try:
+            return float(response)
+        except ValueError:
+            print("Error: Invalid temperature format")
+            return None
+    return None
+
+def set_temperature(device, temperature):
+    """
+    Set target temperature.
+    
+    Example:
+        success = set_temperature(device, 25.0)
+    """
+    response = send_command(device, f"TEMP:{temperature}")
+    return response == "OK"
+
+def get_device_id(device):
+    """
+    Get device identifier.
+    
+    Example:
+        device_id = get_device_id(device)
+    """
+    return send_command(device, "ID?")
+```
+
+## Error Handling Functions
+
+Let's add functions to handle common errors:
+
+```python
+def check_connection(device):
+    """
+    Check if device is responding.
+    
+    Example:
+        if check_connection(device):
+            print("Device is connected")
+    """
+    if not device or not device.is_open:
+        return False
+    
+    # Try to get device ID as a connection test
+    response = get_device_id(device)
+    return response is not None and not response.startswith("ERROR")
+
+def handle_error_response(response):
+    """
+    Process error responses from device.
+    
+    Example:
+        if response.startswith("ERROR"):
+            error_msg = handle_error_response(response)
+    """
+    if not response.startswith("ERROR"):
+        return None
+        
+    error_codes = {
+        "ERROR: Unknown command": "Invalid command sent to device",
+        "ERROR: Invalid temperature value": "Temperature value out of range"
+    }
+    
+    return error_codes.get(response, "Unknown error occurred")
+```
+
+## Putting It All Together
+
+Here's how to use all these functions together:
+
+```python
+def monitor_temperature(duration_seconds=10, interval=1):
+    """
+    Monitor temperature for a specified duration.
+    
+    Example:
+        readings = monitor_temperature(duration_seconds=5)
+    """
+    device = open_connection()
+    if not device:
+        return None
+        
+    readings = []
+    start_time = time.time()
+    
+    try:
+        while time.time() - start_time < duration_seconds:
+            temp = get_temperature(device)
+            if temp is not None:
+                readings.append((time.time(), temp))
+            time.sleep(interval)
+    finally:
+        close_connection(device)
+        
+    return readings
+```
+
+## Example Usage
+
+Here's a complete example of using our functions:
+
+```python
+# Start monitoring
+print("Starting temperature monitoring...")
+readings = monitor_temperature(duration_seconds=5)
+
+if readings:
+    print("\nTemperature Readings:")
+    for timestamp, temp in readings:
+        print(f"Time: {timestamp:.1f}s, Temperature: {temp:.1f}°C")
+else:
+    print("Error: Could not collect temperature readings")
+```
+
+## Benefits of Functional Approach
+
+1. Each function has a clear, single responsibility
+2. Easy to test individual components
+3. Functions can be combined flexibly
+4. Simple error handling at each step
+
+## Practice Exercises
+
+1. **Basic**: Add a function to calculate average temperature over multiple readings
+2. **Intermediate**: Create a function to detect if temperature is stable
+3. **Advanced**: Implement a data logging function that saves readings to a file
+
+## What's Next
+
+In the next chapter, we'll refactor this code into a class-based approach, which will help us manage device state and create a more robust communication interface.
+
+## References
+
+For more information on serial communication in Python, see @pyserial_docs.

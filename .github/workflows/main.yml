@@ -1,0 +1,87 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11"]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install uv
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+    - name: Install Python ${{ matrix.python-version }}
+      run: uv python ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        uv venv
+        source .venv/bin/activate
+        uv pip install -r requirements.txt
+        uv pip install pytest pytest-cov ruff black
+
+    - name: Lint with ruff
+      run: |
+        source .venv/bin/activate
+        ruff check .
+
+    - name: Check formatting with black
+      run: |
+        source .venv/bin/activate
+        black --check .
+
+    - name: Run tests with pytest
+      run: |
+        source .venv/bin/activate
+        pytest --cov=. --cov-report=xml
+
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v3
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+  build-docs:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'  # Only run on main branch
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install Quarto
+      uses: quarto-dev/quarto-actions/setup@v2
+
+    - name: Install uv and Python
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+        uv python 3.11
+
+    - name: Install dependencies
+      run: |
+        uv venv
+        source .venv/bin/activate
+        uv pip install -r requirements.txt
+
+    - name: Render Quarto Project
+      run: |
+        source .venv/bin/activate
+        quarto render
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_book

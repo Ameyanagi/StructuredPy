@@ -1,0 +1,51 @@
+name: Test Examples
+
+on:
+  push:
+    paths:
+      - 'code/**'
+      - '.github/workflows/test.yml'
+  pull_request:
+    paths:
+      - 'code/**'
+      - '.github/workflows/test.yml'
+
+jobs:
+  test-examples:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11"]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install uv
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+    - name: Install Python ${{ matrix.python-version }}
+      run: uv python ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        uv venv
+        source .venv/bin/activate
+        uv pip install -r requirements.txt
+        uv pip install pytest
+
+    - name: Test Time Series Examples
+      run: |
+        source .venv/bin/activate
+        pytest code/timeseries/tests/
+
+    - name: Test Device Communication Examples
+      run: |
+        source .venv/bin/activate
+        pytest code/device/tests/
+
+    - name: Test API Examples
+      run: |
+        source .venv/bin/activate
+        pytest code/api/tests/

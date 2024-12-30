@@ -1,0 +1,211 @@
+# Setup Guide
+
+This guide will help you set up your Python development environment using uv, a modern alternative to traditional Python tooling. uv handles everything from Python installation to package management.
+
+## Installing uv
+
+First, let's install uv:
+
+1. **macOS or Linux**:
+   ```bash
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
+
+2. **Windows**:
+   ```bash
+   powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+   ```
+
+## Setting Up Python with uv
+
+uv can manage Python versions for you. Let's set up Python 3.11 (recommended for this tutorial):
+
+```bash
+uv python 3.11
+```
+
+This command will:
+- Download Python 3.11
+- Install it in a uv-managed location
+- Make it available for your projects
+
+## Project Setup
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Ameyanagi/StructuredPy
+   cd StructuredPy
+   ```
+
+2. **Create Virtual Environment**:
+   ```bash
+   uv venv
+   ```
+
+3. **Activate Virtual Environment**:
+   - Windows (PowerShell):
+     ```bash
+     .venv/Scripts/activate.ps1
+     ```
+   - macOS/Linux:
+     ```bash
+     source .venv/bin/activate
+     ```
+
+## Installing Dependencies
+
+Install all project dependencies using uv:
+
+```bash
+uv pip install -r requirements.txt
+```
+
+This will install packages much faster than traditional pip.
+
+## IDE Setup
+
+We recommend Visual Studio Code:
+
+1. **Install VS Code**:
+   - Download from [code.visualstudio.com](https://code.visualstudio.com)
+
+2. **Install Extensions**:
+   - Python extension by Microsoft
+   - Pylance for enhanced language support
+
+3. **Configure VS Code Settings**:
+   
+   Press `Cmd+,` (macOS) or `Ctrl+,` (Windows/Linux) and add these settings:
+   ```json
+   {
+       "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+       "python.analysis.typeCheckingMode": "basic",
+       "editor.formatOnSave": true,
+       "python.formatting.provider": "black"
+   }
+   ```
+
+## Project Structure
+
+Your project structure should look like this:
+
+```text
+StructuredPy/
+├── .venv/                # Virtual environment
+├── chapters/            # Tutorial chapters
+├── code/                # Project code
+│   ├── timeseries/     # Time series analysis
+│   ├── device/         # Device communication
+│   └── api/            # API server
+└── requirements.txt     # Dependencies
+```
+
+## Verifying Installation
+
+Run these commands to verify your setup:
+
+```bash
+# Should show Python 3.11.x
+python --version
+
+# Should show installed packages
+uv pip list
+```
+
+## Common Issues and Solutions
+
+1. **Command Not Found**:
+   ```bash
+   # Add uv to your PATH
+   export PATH="$HOME/.cargo/bin:$PATH"  # macOS/Linux
+   # or
+   $Env:Path += ";$Home\.cargo\bin"      # Windows PowerShell
+   ```
+
+2. **Virtual Environment Issues**:
+   ```bash
+   # Remove and recreate
+   rm -rf .venv
+   uv venv
+   ```
+
+3. **Permission Issues**:
+   ```bash
+   # macOS/Linux
+   sudo chown -R $USER ~/.cargo
+   
+   # Windows (run as administrator)
+   takeown /F %USERPROFILE%\.cargo /R
+   ```
+
+## Development Tools
+
+uv automatically handles development tools. Here's how to use them:
+
+1. **Code Formatting**:
+   ```bash
+   # Format code
+   uv pip install black
+   black .
+   ```
+
+2. **Linting**:
+   ```bash
+   # Run linter
+   uv pip install ruff
+   ruff check .
+   ```
+
+3. **Testing**:
+   ```bash
+   # Run tests
+   uv pip install pytest
+   pytest
+   ```
+
+## Best Practices
+
+1. **Always Use Virtual Environments**:
+   - One environment per project
+   - Never install packages globally
+
+2. **Dependencies Management**:
+   ```bash
+   # Add new dependency
+   uv pip install package_name
+   
+   # Update requirements.txt
+   uv pip freeze > requirements.txt
+   ```
+
+3. **Keep Python Updated**:
+   ```bash
+   # Check available versions
+   uv python --list
+   
+   # Install new version
+   uv python 3.11
+   ```
+
+## Next Steps
+
+1. Activate your virtual environment
+2. Check the Python basics appendix if needed
+3. Start with Chapter 1 of the tutorial
+4. Join our community for help
+
+## Additional Resources
+
+- [uv Documentation](https://github.com/astral-sh/uv)
+- [VS Code Python](https://code.visualstudio.com/docs/python/python-tutorial)
+- [Modern Python Development Tools](https://astral.sh)
+
+## Getting Help
+
+If you encounter any issues:
+
+1. Check the [uv issues](https://github.com/astral-sh/uv/issues) page
+2. Ask in our GitHub discussions
+3. Search Stack Overflow with the 'uv-python' tag
+
+Remember to keep your virtual environment active while working on the tutorial projects. You can always recreate it if something goes wrong.

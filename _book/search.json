@@ -64,23 +64,23 @@
   {
     "objectID": "chapters/03-device-functions.html",
     "href": "chapters/03-device-functions.html",
-    "title": "",
+    "title": "3  Device Communication with Functions",
     "section": "",
-    "text": "Device Communication3  03-device-functions.html Code",
+    "text": "3.1 Introduction\nIn this chapter, we’ll build a mock serial communication system that simulates interaction with a scientific instrument. We’ll create functions to: - Send commands to the device - Read responses - Handle errors - Parse data\nThis will help you understand how to communicate with real hardware devices while practicing in a safe, simulated environment.",
     "crumbs": [
       "Device Communication",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>03-device-functions.html</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Device Communication with Functions</span>"
     ]
   },
   {
     "objectID": "chapters/04-device-classes.html",
     "href": "chapters/04-device-classes.html",
-    "title": "4  Device Communication with Functions",
+    "title": "4  Device Communication with Classes",
     "section": "",
-    "text": "4.1 Introduction\nIn this chapter, we’ll build a mock serial communication system that simulates interaction with a scientific instrument. We’ll create functions to: - Send commands to the device - Read responses - Handle errors - Parse data\nThis will help you understand how to communicate with real hardware devices while practicing in a safe, simulated environment.",
+    "text": "4.1 Introduction\nIn the previous chapter, we used functions to communicate with our mock device. Now, we’ll reorganize this functionality into a class-based structure. This will help us: - Maintain device state - Organize related commands - Handle errors consistently - Create a cleaner interface",
     "crumbs": [
       "Device Communication",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Classes</span>"
     ]
   },
   {
@@ -293,7 +293,7 @@
     "href": "chapters/01-timeseries-functions.html#project-overview",
     "title": "1  Time Series Analysis with Functions",
     "section": "1.2 Project Overview",
-    "text": "1.2 Project Overview\nWe’ll work with temperature sensor data that looks like this:\ntimestamp,temperature,humidity\n2024-01-01 00:00:00,22.5,45\n2024-01-01 00:01:00,22.6,46\n2024-01-01 00:02:00,22.4,45\nThis data represents temperature and humidity readings taken every minute. Our goal is to create functions that help us understand this data.",
+    "text": "1.2 Project Overview\nWe’ll work with temperature sensor data that looks like this:\n\n\n\ntimestamp\ntemperature\nhumidity\n\n\n\n\n2024-01-01 00:00:00\n22.5\n45\n\n\n2024-01-01 00:01:00\n22.6\n46\n\n\n2024-01-01 00:02:00\n22.4\n45\n\n\n\nThis data represents temperature and humidity readings taken every minute. Our goal is to create functions that help us understand this data.",
     "crumbs": [
       "Time Series Analysis",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Time Series Analysis with Functions</span>"
@@ -610,34 +610,34 @@
   {
     "objectID": "chapters/04-device-classes.html#practice-exercises",
     "href": "chapters/04-device-classes.html#practice-exercises",
-    "title": "4  Device Communication with Functions",
-    "section": "4.10 Practice Exercises",
-    "text": "4.10 Practice Exercises\n\nBasic: Add a function to calculate average temperature over multiple readings\nIntermediate: Create a function to detect if temperature is stable\nAdvanced: Implement a data logging function that saves readings to a file",
+    "title": "4  Device Communication with Classes",
+    "section": "4.9 Practice Exercises",
+    "text": "4.9 Practice Exercises\n\nBasic: Add a method to calculate average temperature over time\nIntermediate: Implement a method for temperature ramping\nAdvanced: Create a method for automated calibration",
     "crumbs": [
       "Device Communication",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Classes</span>"
     ]
   },
   {
     "objectID": "chapters/04-device-classes.html#whats-next",
     "href": "chapters/04-device-classes.html#whats-next",
-    "title": "4  Device Communication with Functions",
-    "section": "4.11 What’s Next",
-    "text": "4.11 What’s Next\nIn the next chapter, we’ll refactor this code into a class-based approach, which will help us manage device state and create a more robust communication interface.",
+    "title": "4  Device Communication with Classes",
+    "section": "4.10 What’s Next",
+    "text": "4.10 What’s Next\nIn the next chapters, we’ll build an API server that uses this device interface to provide network access to our instruments.",
     "crumbs": [
       "Device Communication",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Classes</span>"
     ]
   },
   {
     "objectID": "chapters/04-device-classes.html#references",
     "href": "chapters/04-device-classes.html#references",
-    "title": "4  Device Communication with Functions",
-    "section": "4.12 References",
-    "text": "4.12 References\nFor more information on serial communication in Python, see pySerial Team (2024).\n\n\n\n\n\n\npySerial Team. 2024. “pySerial Documentation.” 2024. https://pythonhosted.org/pyserial/.",
+    "title": "4  Device Communication with Classes",
+    "section": "4.11 References",
+    "text": "4.11 References\nFor more information on object-oriented programming with hardware devices, see Beazley and Jones (2013).\n\n\n\n\n\n\nBeazley, David, and Brian K Jones. 2013. Python Cookbook. O’Reilly Media.",
     "crumbs": [
       "Device Communication",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Classes</span>"
     ]
   },
   {
@@ -902,6 +902,204 @@
     "crumbs": [
       "Building APIs",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Building a Complete API Server</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-device-functions.html#understanding-serial-communication",
+    "href": "chapters/03-device-functions.html#understanding-serial-communication",
+    "title": "3  Device Communication with Functions",
+    "section": "3.2 Understanding Serial Communication",
+    "text": "3.2 Understanding Serial Communication\nBefore we start coding, let’s understand basic serial communication:\nsequenceDiagram\n    participant Computer\n    participant Device\n    Computer-&gt;&gt;Device: Send Command\n    Note right of Device: Process Command\n    Device-&gt;&gt;Computer: Send Response\n    Note left of Computer: Process Response",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-device-functions.html#creating-a-mock-serial-device",
+    "href": "chapters/03-device-functions.html#creating-a-mock-serial-device",
+    "title": "3  Device Communication with Functions",
+    "section": "3.3 Creating a Mock Serial Device",
+    "text": "3.3 Creating a Mock Serial Device\nFirst, let’s create a mock serial device that simulates real hardware:\nclass MockSerial:\n    \"\"\"A mock serial device that simulates basic device communication.\"\"\"\n    \n    def __init__(self):\n        self.is_open = False\n        self.temperature = 25.0  # Initial temperature\n        self.buffer = \"\"\n        \n    def open(self):\n        \"\"\"Open the serial connection.\"\"\"\n        self.is_open = True\n        \n    def close(self):\n        \"\"\"Close the serial connection.\"\"\"\n        self.is_open = False\n        \n    def write(self, data):\n        \"\"\"Simulate writing data to device.\"\"\"\n        if not self.is_open:\n            raise IOError(\"Port not open\")\n        self.buffer = data.decode('utf-8').strip()\n        \n    def readline(self):\n        \"\"\"Simulate reading response from device.\"\"\"\n        if not self.is_open:\n            raise IOError(\"Port not open\")\n            \n        # Simulate device responses\n        if self.buffer == \"TEMP?\":\n            response = f\"{self.temperature:.1f}\"\n            # Simulate temperature variation\n            self.temperature += (random.random() - 0.5)\n        elif self.buffer == \"ID?\":\n            response = \"MOCK-DEVICE-001\"\n        elif self.buffer.startswith(\"TEMP:\"):\n            try:\n                self.temperature = float(self.buffer.split(\":\")[1])\n                response = \"OK\"\n            except ValueError:\n                response = \"ERROR: Invalid temperature value\"\n        else:\n            response = \"ERROR: Unknown command\"\n            \n        return (response + \"\\n\").encode('utf-8')",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-device-functions.html#communication-functions",
+    "href": "chapters/03-device-functions.html#communication-functions",
+    "title": "3  Device Communication with Functions",
+    "section": "3.4 Communication Functions",
+    "text": "3.4 Communication Functions\nNow let’s create functions to communicate with our device:\ndef open_connection(port='/dev/ttyUSB0', baudrate=9600):\n    \"\"\"\n    Open a connection to the device.\n    \n    Example:\n        device = open_connection('/dev/ttyUSB0')\n    \"\"\"\n    try:\n        # In real code, we would use: serial.Serial(port, baudrate)\n        device = MockSerial()\n        device.open()\n        return device\n    except Exception as e:\n        print(f\"Error opening connection: {e}\")\n        return None\n\ndef close_connection(device):\n    \"\"\"\n    Safely close the device connection.\n    \n    Example:\n        close_connection(device)\n    \"\"\"\n    try:\n        device.close()\n        return True\n    except Exception as e:\n        print(f\"Error closing connection: {e}\")\n        return False\n\ndef send_command(device, command):\n    \"\"\"\n    Send a command to the device and get response.\n    \n    Example:\n        response = send_command(device, \"TEMP?\")\n    \"\"\"\n    try:\n        # Send command\n        device.write(command.encode('utf-8'))\n        \n        # Read response\n        response = device.readline()\n        return response.decode('utf-8').strip()\n    except Exception as e:\n        print(f\"Error sending command: {e}\")\n        return None",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-device-functions.html#data-handling-functions",
+    "href": "chapters/03-device-functions.html#data-handling-functions",
+    "title": "3  Device Communication with Functions",
+    "section": "3.5 Data Handling Functions",
+    "text": "3.5 Data Handling Functions\nLet’s add functions to handle specific types of commands and responses:\ndef get_temperature(device):\n    \"\"\"\n    Get current temperature reading.\n    \n    Example:\n        temp = get_temperature(device)\n        print(f\"Temperature: {temp}°C\")\n    \"\"\"\n    response = send_command(device, \"TEMP?\")\n    if response and not response.startswith(\"ERROR\"):\n        try:\n            return float(response)\n        except ValueError:\n            print(\"Error: Invalid temperature format\")\n            return None\n    return None\n\ndef set_temperature(device, temperature):\n    \"\"\"\n    Set target temperature.\n    \n    Example:\n        success = set_temperature(device, 25.0)\n    \"\"\"\n    response = send_command(device, f\"TEMP:{temperature}\")\n    return response == \"OK\"\n\ndef get_device_id(device):\n    \"\"\"\n    Get device identifier.\n    \n    Example:\n        device_id = get_device_id(device)\n    \"\"\"\n    return send_command(device, \"ID?\")",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-device-functions.html#error-handling-functions",
+    "href": "chapters/03-device-functions.html#error-handling-functions",
+    "title": "3  Device Communication with Functions",
+    "section": "3.6 Error Handling Functions",
+    "text": "3.6 Error Handling Functions\nLet’s add functions to handle common errors:\ndef check_connection(device):\n    \"\"\"\n    Check if device is responding.\n    \n    Example:\n        if check_connection(device):\n            print(\"Device is connected\")\n    \"\"\"\n    if not device or not device.is_open:\n        return False\n    \n    # Try to get device ID as a connection test\n    response = get_device_id(device)\n    return response is not None and not response.startswith(\"ERROR\")\n\ndef handle_error_response(response):\n    \"\"\"\n    Process error responses from device.\n    \n    Example:\n        if response.startswith(\"ERROR\"):\n            error_msg = handle_error_response(response)\n    \"\"\"\n    if not response.startswith(\"ERROR\"):\n        return None\n        \n    error_codes = {\n        \"ERROR: Unknown command\": \"Invalid command sent to device\",\n        \"ERROR: Invalid temperature value\": \"Temperature value out of range\"\n    }\n    \n    return error_codes.get(response, \"Unknown error occurred\")",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-device-functions.html#putting-it-all-together",
+    "href": "chapters/03-device-functions.html#putting-it-all-together",
+    "title": "3  Device Communication with Functions",
+    "section": "3.7 Putting It All Together",
+    "text": "3.7 Putting It All Together\nHere’s how to use all these functions together:\ndef monitor_temperature(duration_seconds=10, interval=1):\n    \"\"\"\n    Monitor temperature for a specified duration.\n    \n    Example:\n        readings = monitor_temperature(duration_seconds=5)\n    \"\"\"\n    device = open_connection()\n    if not device:\n        return None\n        \n    readings = []\n    start_time = time.time()\n    \n    try:\n        while time.time() - start_time &lt; duration_seconds:\n            temp = get_temperature(device)\n            if temp is not None:\n                readings.append((time.time(), temp))\n            time.sleep(interval)\n    finally:\n        close_connection(device)\n        \n    return readings",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-device-functions.html#example-usage",
+    "href": "chapters/03-device-functions.html#example-usage",
+    "title": "3  Device Communication with Functions",
+    "section": "3.8 Example Usage",
+    "text": "3.8 Example Usage\nHere’s a complete example of using our functions:\n# Start monitoring\nprint(\"Starting temperature monitoring...\")\nreadings = monitor_temperature(duration_seconds=5)\n\nif readings:\n    print(\"\\nTemperature Readings:\")\n    for timestamp, temp in readings:\n        print(f\"Time: {timestamp:.1f}s, Temperature: {temp:.1f}°C\")\nelse:\n    print(\"Error: Could not collect temperature readings\")",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-device-functions.html#benefits-of-functional-approach",
+    "href": "chapters/03-device-functions.html#benefits-of-functional-approach",
+    "title": "3  Device Communication with Functions",
+    "section": "3.9 Benefits of Functional Approach",
+    "text": "3.9 Benefits of Functional Approach\n\nEach function has a clear, single responsibility\nEasy to test individual components\nFunctions can be combined flexibly\nSimple error handling at each step",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-device-functions.html#practice-exercises",
+    "href": "chapters/03-device-functions.html#practice-exercises",
+    "title": "3  Device Communication with Functions",
+    "section": "3.10 Practice Exercises",
+    "text": "3.10 Practice Exercises\n\nBasic: Add a function to calculate average temperature over multiple readings\nIntermediate: Create a function to detect if temperature is stable\nAdvanced: Implement a data logging function that saves readings to a file",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-device-functions.html#whats-next",
+    "href": "chapters/03-device-functions.html#whats-next",
+    "title": "3  Device Communication with Functions",
+    "section": "3.11 What’s Next",
+    "text": "3.11 What’s Next\nIn the next chapter, we’ll refactor this code into a class-based approach, which will help us manage device state and create a more robust communication interface.",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-device-functions.html#references",
+    "href": "chapters/03-device-functions.html#references",
+    "title": "3  Device Communication with Functions",
+    "section": "3.12 References",
+    "text": "3.12 References\nFor more information on serial communication in Python, see pySerial Team (2024).\n\n\n\n\n\n\npySerial Team. 2024. “pySerial Documentation.” 2024. https://pythonhosted.org/pyserial/.",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Device Communication with Functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#basic-device-interface",
+    "href": "chapters/04-device-classes.html#basic-device-interface",
+    "title": "4  Device Communication with Classes",
+    "section": "4.2 Basic Device Interface",
+    "text": "4.2 Basic Device Interface\nLet’s start by creating our device interface class:\nimport time\nimport random\nfrom datetime import datetime\n\nclass DeviceInterface:\n    \"\"\"Interface for communicating with scientific instruments.\"\"\"\n    \n    def __init__(self, port='/dev/ttyUSB0', baudrate=9600):\n        \"\"\"Initialize device interface.\"\"\"\n        self.port = port\n        self.baudrate = baudrate\n        self.device = None\n        self.connected = False\n        \n    def connect(self):\n        \"\"\"Establish connection with the device.\"\"\"\n        try:\n            self.device = MockSerial()\n            self.device.open()\n            self.connected = True\n            print(f\"Connected to device on {self.port}\")\n            return True\n        except Exception as e:\n            print(f\"Connection failed: {e}\")\n            self.connected = False\n            return False\n            \n    def disconnect(self):\n        \"\"\"Close device connection.\"\"\"\n        if self.connected:\n            try:\n                self.device.close()\n                self.connected = False\n                print(\"Disconnected from device\")\n                return True\n            except Exception as e:\n                print(f\"Error disconnecting: {e}\")\n                return False\n        return True",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#command-methods",
+    "href": "chapters/04-device-classes.html#command-methods",
+    "title": "4  Device Communication with Classes",
+    "section": "4.3 Command Methods",
+    "text": "4.3 Command Methods\nNow let’s add methods for sending commands:\n    def send_command(self, command):\n        \"\"\"Send a command to the device.\"\"\"\n        if not self.connected:\n            print(\"Error: Device not connected\")\n            return None\n            \n        try:\n            self.device.write(command.encode('utf-8'))\n            response = self.device.readline()\n            return response.decode('utf-8').strip()\n        except Exception as e:\n            print(f\"Command error: {e}\")\n            return None\n            \n    def get_temperature(self):\n        \"\"\"Get current temperature reading.\"\"\"\n        response = self.send_command(\"TEMP?\")\n        if response and not response.startswith(\"ERROR\"):\n            try:\n                return float(response)\n            except ValueError:\n                print(\"Error: Invalid temperature format\")\n                return None\n        return None\n        \n    def set_temperature(self, temperature):\n        \"\"\"Set target temperature.\"\"\"\n        response = self.send_command(f\"TEMP:{temperature}\")\n        return response == \"OK\"\n        \n    def get_device_id(self):\n        \"\"\"Get device identifier.\"\"\"\n        return self.send_command(\"ID?\")",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#adding-monitoring-features",
+    "href": "chapters/04-device-classes.html#adding-monitoring-features",
+    "title": "4  Device Communication with Classes",
+    "section": "4.4 Adding Monitoring Features",
+    "text": "4.4 Adding Monitoring Features\nLet’s add methods for continuous monitoring:\n    def monitor_temperature(self, duration_seconds=10, interval=1):\n        \"\"\"Monitor temperature for a specified duration.\"\"\"\n        if not self.connected:\n            print(\"Error: Device not connected\")\n            return None\n            \n        readings = []\n        start_time = time.time()\n        \n        try:\n            while time.time() - start_time &lt; duration_seconds:\n                temp = self.get_temperature()\n                if temp is not None:\n                    timestamp = datetime.now()\n                    readings.append((timestamp, temp))\n                time.sleep(interval)\n        except KeyboardInterrupt:\n            print(\"\\nMonitoring stopped by user\")\n        except Exception as e:\n            print(f\"Monitoring error: {e}\")\n            \n        return readings\n        \n    def check_temperature_stability(self, num_readings=5, interval=1):\n        \"\"\"Check if temperature is stable.\"\"\"\n        readings = []\n        for _ in range(num_readings):\n            temp = self.get_temperature()\n            if temp is not None:\n                readings.append(temp)\n            time.sleep(interval)\n            \n        if not readings:\n            return False\n            \n        # Calculate standard deviation\n        mean = sum(readings) / len(readings)\n        variance = sum((x - mean) ** 2 for x in readings) / len(readings)\n        std_dev = variance ** 0.5\n        \n        # Consider stable if standard deviation is less than 0.5 degrees\n        return std_dev &lt; 0.5",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#data-logging",
+    "href": "chapters/04-device-classes.html#data-logging",
+    "title": "4  Device Communication with Classes",
+    "section": "4.5 Data Logging",
+    "text": "4.5 Data Logging\nLet’s add methods for logging data:\n    def start_logging(self, filepath, interval=1):\n        \"\"\"Log temperature readings to a file.\"\"\"\n        print(f\"Starting temperature logging to {filepath}\")\n        \n        try:\n            with open(filepath, 'w') as f:\n                f.write(\"timestamp,temperature\\n\")\n                \n                while True:\n                    temp = self.get_temperature()\n                    if temp is not None:\n                        timestamp = datetime.now()\n                        f.write(f\"{timestamp},{temp}\\n\")\n                        f.flush()  # Ensure data is written immediately\n                    time.sleep(interval)\n                    \n        except KeyboardInterrupt:\n            print(\"\\nLogging stopped by user\")\n        except Exception as e:\n            print(f\"Logging error: {e}\")",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#using-the-device-interface",
+    "href": "chapters/04-device-classes.html#using-the-device-interface",
+    "title": "4  Device Communication with Classes",
+    "section": "4.6 Using the Device Interface",
+    "text": "4.6 Using the Device Interface\nHere’s how to use our device interface:\n# Create device interface\ndevice = DeviceInterface('/dev/ttyUSB0')\n\n# Connect to device\nif device.connect():\n    try:\n        # Get device info\n        device_id = device.get_device_id()\n        print(f\"Connected to device: {device_id}\")\n        \n        # Monitor temperature\n        print(\"\\nMonitoring temperature...\")\n        readings = device.monitor_temperature(duration_seconds=5)\n        \n        if readings:\n            print(\"\\nTemperature Readings:\")\n            for timestamp, temp in readings:\n                print(f\"Time: {timestamp}, Temperature: {temp:.1f}°C\")\n                \n        # Check stability\n        if device.check_temperature_stability():\n            print(\"\\nTemperature is stable\")\n        else:\n            print(\"\\nTemperature is not stable\")\n            \n    finally:\n        device.disconnect()",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#benefits-of-class-based-approach",
+    "href": "chapters/04-device-classes.html#benefits-of-class-based-approach",
+    "title": "4  Device Communication with Classes",
+    "section": "4.7 Benefits of Class-Based Approach",
+    "text": "4.7 Benefits of Class-Based Approach\n\nState Management:\n\nConnection state is tracked automatically\nDevice settings are maintained\nEasier to handle device configuration\n\nOrganized Interface:\n\nRelated methods are grouped together\nConsistent error handling\nCleaner command structure\n\nExtended Functionality:\n\nEasy to add new features\nCan add property decorators for device settings\nBetter support for complex operations",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Classes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-device-classes.html#comparing-approaches",
+    "href": "chapters/04-device-classes.html#comparing-approaches",
+    "title": "4  Device Communication with Classes",
+    "section": "4.8 Comparing Approaches",
+    "text": "4.8 Comparing Approaches\nLet’s compare the functional and class-based approaches:\n\n\n\nFeature\nFunctional\nClass-Based\n\n\n\n\nState Management\nManual\nAutomatic\n\n\nError Handling\nPer-function\nCentralized\n\n\nCode Organization\nSeparate functions\nGrouped methods\n\n\nDevice Settings\nPassed as parameters\nStored in instance\n\n\nExtensibility\nNew functions\nNew methods and properties",
+    "crumbs": [
+      "Device Communication",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Device Communication with Classes</span>"
     ]
   }
 ]

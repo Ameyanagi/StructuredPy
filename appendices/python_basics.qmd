@@ -1,0 +1,320 @@
+# Python Basics
+
+This appendix covers the fundamental Python concepts you'll need for this tutorial.
+
+## Variables and Data Types
+
+### Basic Data Types
+
+```python
+# Numbers
+temperature = 25.5       # Float
+count = 10              # Integer
+
+# Strings
+message = "Hello"       # String
+device_id = 'DEV001'    # String (single or double quotes)
+
+# Booleans
+is_connected = True     # Boolean
+is_ready = False       # Boolean
+
+# None (null value)
+result = None          # None type
+```
+
+### Lists and Dictionaries
+
+```python
+# Lists (ordered, changeable)
+temperatures = [25.5, 26.0, 25.8]
+devices = ['DEV001', 'DEV002', 'DEV003']
+
+# Accessing list elements
+first_temp = temperatures[0]     # 25.5
+last_device = devices[-1]        # 'DEV003'
+
+# Changing list elements
+temperatures[0] = 26.5
+
+# Adding to lists
+temperatures.append(26.2)
+
+# Dictionaries (key-value pairs)
+device_info = {
+    'id': 'DEV001',
+    'temperature': 25.5,
+    'connected': True
+}
+
+# Accessing dictionary values
+device_id = device_info['id']           # 'DEV001'
+temp = device_info.get('temperature')   # 25.5
+```
+
+## Control Flow
+
+### If Statements
+
+```python
+temperature = 25.5
+
+if temperature > 30:
+    print("Temperature too high")
+elif temperature < 20:
+    print("Temperature too low")
+else:
+    print("Temperature normal")
+
+# Using and/or
+if temperature > 20 and temperature < 30:
+    print("Temperature in range")
+
+# Checking for None
+if result is not None:
+    print("Have result")
+```
+
+### Loops
+
+```python
+# For loops with lists
+for temp in temperatures:
+    print(f"Temperature: {temp}")
+
+# For loops with range
+for i in range(5):
+    print(f"Reading {i}")
+
+# While loops
+count = 0
+while count < 5:
+    print(f"Count: {count}")
+    count += 1
+
+# Breaking loops
+while True:
+    temperature = get_temperature()
+    if temperature > 30:
+        break
+```
+
+## Functions
+
+### Basic Functions
+
+```python
+# Simple function
+def get_temperature():
+    return 25.5
+
+# Function with parameters
+def check_temperature(temp, min_temp, max_temp):
+    return min_temp <= temp <= max_temp
+
+# Function with default values
+def read_sensor(retries=3):
+    for i in range(retries):
+        # Try reading sensor
+        pass
+```
+
+### Return Values
+
+```python
+# Single return value
+def calculate_average(values):
+    if not values:
+        return 0
+    return sum(values) / len(values)
+
+# Multiple return values
+def get_stats(values):
+    minimum = min(values)
+    maximum = max(values)
+    average = sum(values) / len(values)
+    return minimum, maximum, average
+```
+
+## Exception Handling
+
+```python
+# Basic try/except
+try:
+    temperature = get_temperature()
+except Exception as e:
+    print(f"Error: {e}")
+
+# Multiple exception types
+try:
+    with open('data.txt') as f:
+        data = f.read()
+except FileNotFoundError:
+    print("File not found")
+except PermissionError:
+    print("Permission denied")
+except Exception as e:
+    print(f"Unknown error: {e}")
+
+# Using finally
+try:
+    device.connect()
+    device.read_data()
+except Exception as e:
+    print(f"Error: {e}")
+finally:
+    device.disconnect()  # Always runs
+```
+
+## String Formatting
+
+```python
+# f-strings (recommended)
+temp = 25.5
+message = f"Temperature: {temp}°C"
+
+# Format method
+message = "Temperature: {:.1f}°C".format(temp)
+
+# String concatenation
+message = "Temperature: " + str(temp) + "°C"
+```
+
+## File Operations
+
+```python
+# Reading files
+with open('data.txt', 'r') as file:
+    content = file.read()        # Read entire file
+    lines = file.readlines()     # Read lines into list
+
+# Writing files
+with open('log.txt', 'w') as file:
+    file.write("Temperature log\n")
+    file.write(f"Reading: {temp}\n")
+
+# Appending to files
+with open('log.txt', 'a') as file:
+    file.write(f"New reading: {temp}\n")
+```
+
+## Modules and Imports
+
+```python
+# Importing entire modules
+import time
+time.sleep(1)
+
+# Importing specific items
+from datetime import datetime
+current_time = datetime.now()
+
+# Importing with alias
+import pandas as pd
+df = pd.DataFrame()
+```
+
+## Essential Built-in Functions
+
+```python
+# len() - Length of sequences
+length = len([1, 2, 3])     # 3
+
+# range() - Number sequences
+for i in range(5):          # 0 to 4
+
+# print() - Output
+print(f"Value: {value}")    # Formatted output
+
+# type() - Get type of object
+data_type = type(value)     # Get type
+
+# str(), int(), float() - Type conversion
+text = str(123)             # Convert to string
+number = int("123")         # Convert to integer
+decimal = float("12.3")     # Convert to float
+```
+
+## List Operations
+
+```python
+# Common list methods
+values = [1, 2, 3]
+values.append(4)            # Add to end
+values.insert(0, 0)         # Insert at position
+values.remove(2)            # Remove value
+values.pop()               # Remove and return last item
+
+# List slicing
+first_two = values[0:2]     # Get first two items
+reversed_list = values[::-1]  # Reverse list
+
+# List comprehension
+squares = [x**2 for x in range(5)]
+```
+
+## Dictionary Operations
+
+```python
+# Common dictionary methods
+info = {'id': 'DEV001'}
+info['temp'] = 25.5        # Add/update key-value
+value = info.get('id')     # Safe get with default
+info.update({'connected': True})  # Update multiple
+
+# Checking keys
+if 'id' in info:
+    print("Has ID")
+
+# Dictionary comprehension
+squares = {x: x**2 for x in range(3)}
+```
+
+## Common Modules Used in This Tutorial
+
+```python
+# Time and dates
+import time
+time.sleep(1)              # Wait 1 second
+
+from datetime import datetime
+now = datetime.now()       # Current time
+
+# JSON handling
+import json
+data = json.loads('{"temp": 25.5}')  # Parse JSON
+text = json.dumps(data)    # Convert to JSON
+
+# System operations
+import os
+path = os.path.join('folder', 'file.txt')
+```
+
+## Code Style Guidelines
+
+1. Use clear, descriptive names
+2. Use snake_case for functions and variables
+3. Add spaces around operators
+4. Use 4 spaces for indentation
+5. Add comments for complex logic
+6. Keep functions focused and small
+7. Handle errors appropriately
+
+Example of well-styled code:
+```python
+def calculate_average_temperature(readings):
+    """Calculate average temperature from a list of readings."""
+    if not readings:
+        return None
+        
+    try:
+        total = sum(readings)
+        return total / len(readings)
+    except Exception as e:
+        print(f"Error calculating average: {e}")
+        return None
+```
+
+## What's Next
+
+This appendix covered the Python basics needed for our tutorial. As you work through the main chapters, refer back here if you need to review any concepts.
