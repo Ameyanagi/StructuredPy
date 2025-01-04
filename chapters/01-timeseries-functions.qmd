@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this chapter, we'll analyze time series data from sensors using Python functions. We'll build a series of focused functions that can:
+In this chapter, we'll analyze time series data from sensors using Python functions. We'll build a simple series of functions that can:
 
 - Load and validate sensor data
 - Calculate basic statistics
@@ -13,13 +13,254 @@ In this chapter, we'll analyze time series data from sensors using Python functi
 
 We'll work with temperature sensor data that looks like this:
 
-| timestamp           | temperature | humidity |
-|---------------------|-------------|----------|
-| 2024-01-01 00:00:00 | 22.5        | 45       |
-| 2024-01-01 00:01:00 | 22.6        | 46       |
-| 2024-01-01 00:02:00 | 22.4        | 45       |
+```{csv}
+timestamp,temperature,humidity
+2024-01-01 00:00:00,22.5,45
+2024-01-01 00:01:00,22.6,46
+2024-01-01 00:02:00,22.4,45
+```
 
 This data represents temperature and humidity readings taken every minute. Our goal is to create functions that help us understand this data.
+
+## Strategy
+
+The first thing that we have to do is to determine what we want to achieve with our analysis. In this case, we want to do something like this:
+
+
+1. Data Loading and Validation
+   - Load CSV files containing sensor data
+   - Validate timestamp formats
+   - Check for missing values
+   - Verify data ranges
+
+2. Basic Statistics
+   - Calculate daily min/max/mean
+   - Identify outliers
+   - Compute moving averages
+
+3. Pattern Detection
+   - Find daily cycles
+   - Detect anomalies
+   - Calculate correlations between temperature and humidity
+
+4. Visualization 
+   - Plot time series trends
+   - Create daily pattern heatmaps
+   - Generate statistical summaries
+
+The main idea is to create functions that can be used to perform these tasks in a modular way. This will make our code more readable, reusable, and easier to maintain.
+
+## Creating that Function Stubs
+
+### Data Management Functions
+
+Lets start by creating the functions to load and validate our data.
+We will not implement the functions yet, just define there signature and purpose.
+This is called "function stubs".
+This will help us to define the structure of our code. So that we can implement the functions later.
+
+
+```python
+def load_sensor_data(filepath):
+    """
+    Load sensor data from a CSV file.
+    
+    Example:
+        data = load_sensor_data('sensor_data.csv')
+    """
+    pass
+```
+
+:::{.callout-tip}
+The `pass` statement is a placeholder that does nothing. It's used as a temporary placeholder when a statement is required syntactically but you don't want to execute any code.
+:::
+
+:::{.callout-tip}
+Here, we will be using the `pandas` library to load and manipulate our data.
+If you are not familiar with `pandas`, you can learn more about it in the [official documentation](https://pandas.pydata.org/docs/).
+:::
+
+We will also create a function to check the quality of our data:
+
+  - Validate timestamp formats
+  - Check for missing values
+  - Verify data ranges
+
+```python
+
+def validate_timestamp_format(data):
+    """
+    Check if timestamp column has valid date formats.
+    
+    Example:
+        is_valid = validate_timestamp_format(data)
+    """
+    pass
+
+def check_missing_values(data):
+    """
+    Check if data contains missing values.
+    
+    Example:
+        has_missing = check_missing_values(data)
+    """
+    pass
+
+def check_data_ranges(data):
+    """
+    Check if data values are within expected ranges.
+
+    Example:
+        is_valid = check_data_ranges(data)
+    """
+    pass
+```
+
+:::{.callout-note}
+Here, we are using splitting the validation into multiple functions to make it easier to understand.
+For real application, you can combine these functions in to a single function if you prefer.
+:::
+
+The good point of the functions stubs is that we can create a downstream function that uses these functions.
+For example, we can create a function that checks the quality of our data by combining these functions:
+
+```python
+def check_data_quality(data):
+    """
+    Check if data has required columns and valid values.
+    
+    Example:
+        is_valid = check_data_quality(data)
+    """
+
+    if not validate_timestamp_format(data):
+        raise ValueError("Invalid timestamp format")
+
+    if check_missing_values(data):
+        raise ValueError("Data contains missing values")
+
+    if not check_data_ranges(data):
+        raise ValueError("Data values are out of range")
+
+    return True
+```
+
+
+### Analysis Functions
+
+Now, let's create function stubs to analyze our data:
+
+```python
+def calculate_daily_stats(data):
+    """
+    Calculate basic statistics for temperature and humidity.
+    
+    Example:
+        stats = calculate_daily_stats(data)
+        print(f"Average temperature: {stats['temp_mean']:.1f}°C")
+    """
+    pass
+
+def detect_patterns(data):
+    """
+    Find recurring patterns in the data.
+
+    Example:
+        patterns = detect_patterns(data)
+    """
+    pass
+
+def find_anomalies(data):
+    """
+    Identify unusual readings in the data.
+
+    Example:
+        anomalies = find_anomalies(data)
+    """
+    pass
+```
+
+### Visualization Functions
+
+Adding functions to visualize our data:
+
+```python
+def plot_timeseries(data):
+    """
+    Create a line plot of temperature over time.
+    
+    Example:
+        plot_timeseries(data)
+        plt.show()
+    """
+    pass
+
+def plot_daily_patterns(data):
+    """
+    Show daily patterns in temperature and humidity.
+
+    Example:
+        plot_daily_patterns(data)
+        plt.show()
+    """
+    pass
+
+def plot_statistics(data):
+    """
+    Create statistical summary plots.
+
+    Example:
+        plot_statistics(data)
+        plt.show()
+    """
+    pass
+
+```
+## Writing the Tests
+
+:::{.callout-note}
+You can skip this section if you are not familiar with testing.
+You can come back to this section later when you are ready to learn about testing.
+:::
+
+Now that we have defined the functions, we can write tests to check if they work as expected.
+This is called "unit testing". The test will help us to check if the functions are working as expected.
+The workflow of writing the test and the function is called "Test Driven Development" (TDD).
+
+Here is an example of how to write tests for the `load_sensor_data` function:
+
+```csv
+timestamp,temperature,humidity
+2024-01-01 00:00:00,22.5,45
+2024-01-01 00:01:00,22.6,46
+2024-01-01 00:02:00,22.4,45
+```
+
+```csv 
+timestamp,temperature,humidity
+2024-01-01 00:00:00,22.5,45
+2024-01-01 00:01:00,22.6,46
+2024-01-01 00:02:00,22.4,
+```
+
+```python
+def test_load_sensor_data():
+    # Test loading a valid file
+    data = load_sensor_data('sensor_data.csv')
+    assert data is not None, "Failed to load valid file"
+    
+    # Test loading a non-existent file
+    data = load_sensor_data('non_existent.csv')
+    assert data is None, "Loaded non-existent file"
+
+    # Test loading a file with missing values
+    data = load_sensor_data('sensor_data_missing.csv')
+    assert data is None, "Loaded file with missing values"
+
+    # Test loading a file with invalid timestamp
+    data = load_sensor_data('sensor_data_invalid.csv')
+    assert data is None, "Loaded file with invalid timestamp"
+```
 
 ## Starting with Basic Functions
 

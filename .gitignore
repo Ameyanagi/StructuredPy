@@ -1,1 +1,38 @@
+# Quarto specific
 /.quarto/
+/_site/
+/_book/
+/_freeze/
+
+# Python environment
+/.venv/
+/__pycache__/
+*.py[cod]
+
+# R specific
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# IDE settings
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Output files
+*.html
+*.pdf
+*.docx
+/_output/
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Jupyter
+.ipynb_checkpoints/
