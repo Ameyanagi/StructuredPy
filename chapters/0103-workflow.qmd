@@ -1,0 +1,336 @@
+# General workflow of coding
+
+This guide will walk you through creating and maintaining a Python project, from writing code to testing, documentation, and version control. You'll learn how to write testable code following Test Driven Development (TDD) principles, create clear documentation, and manage your codebase with Git.
+
+## Open code in Editor
+
+Open the root directory of the project in your preferred code editor (VSCode, Neovim, etc.).
+
+## Running the code
+
+The source code is included in the `structuredpy_code` directory.
+By default the `foo.py` file is included in the directory.
+You can run the code by running the following command:
+
+```bash
+uv run structuredpy_code/foo.py
+```
+
+At this moment, there will be no output, because the `foo.py` file is empty.
+
+```python
+def foo(bar: str) -> str:
+    """Summary line.
+
+    Extended description of function.
+
+    Args:
+        bar: Description of input argument.
+
+    Returns:
+        Description of return value
+    """
+
+    return bar
+
+
+if __name__ == "__main__":  # pragma: no cover
+    pass
+```
+
+We will be make a new file and work on that file, but configuration would be the same.
+
+## Creating a python file and running it
+
+Let's create a new file called `hello.py` in the `structuredpy_code` directory.
+In the `hello.py` file, we will write a simple function that prints "hello world" to the console.
+
+```python
+def main():
+    print("hello world")
+
+
+if __name__ == "__main__":
+    main()
+```
+
+You can run the code by running the following command:
+
+```bash
+uv run structuredpy_code/hello.py
+```
+
+The output will be like this:
+
+```bash
+hello world
+```
+
+## Test the code
+
+Let's look at the test file in the `tests` directory.
+The test file is called `test_foo.py` and it tests the `foo` function in the `foo.py` file.
+
+```python
+from structuredpy_code.foo import foo
+
+
+def test_foo():
+    assert foo("foo") == "foo"
+```
+
+### Running the test
+
+You can run the test by running the following command:
+
+```bash
+make test
+```
+
+This command will run the following command:
+
+```bash
+uv run python -m pytest --cov --cov-config=pyproject.toml --cov-report=xml
+```
+
+The output will be like this:
+
+```bash
+🚀 Testing code: Running pytest
+=================================================================== test session starts ===================================================================
+platform linux -- Python 3.13.1, pytest-8.3.4, pluggy-1.5.0
+rootdir: /home/ameyanagi/StructuredPy-code
+configfile: pyproject.toml
+testpaths: tests
+plugins: cov-6.0.0
+collected 1 item
+
+tests/test_foo.py .                                                                                                                                 [100%]
+
+---------- coverage: platform linux, python 3.13.1-final-0 -----------
+Coverage XML written to file coverage.xml
+
+
+==================================================================== 1 passed in 0.03s ====================================================================
+```
+
+What this does is that it runs the test file cnd see if the code runs with out the error.
+In the `test_foo.py` file, we are testing the `foo` function in the `foo.py` file will return the same string that we passed to it.
+`assert` is a keyword that is used to check if the condition is true. If the condition is false, it will raise an `AssertionError`.
+
+#### Basics of Test Driven Development (TDD)
+
+TDD is a software development process that relies on the repetition of a very short development cycle: requirements are turned into very specific test cases, then the software is improved so that the tests pass. The cycle is repeated until the software is complete.
+
+Let's assume we want to add a new function called `add` in the `foo.py` file.
+We will first create a add `function stub` in the `test_foo.py` file.
+
+```python
+def add(a, b):
+    pass
+```
+
+Then in the `test_foo.py` file, we will write a test for the `add` function.
+Here, we will write 4 tests for the `add` function to check if the function works as expected.
+
+```python
+from structuredpy_code.foo import add
+
+def test_add():
+    assert add(1, 2) == 3
+
+def test_add_negative():
+    assert add(-1, -2) == -3
+
+def test_add_zero():
+    assert add(0, 0) == 0
+
+def test_add_float():
+    assert add(1.5, 2.5) == 4.0
+```
+
+Then we will run the test by running the following command:
+
+```bash
+make test
+```
+
+We now see that all the tests have failed, because we have not implemented the `add` function yet.
+The main idea of TDD is to write the test first, then implement the function to make the test pass.
+
+Let's implement the `add` function in the `foo.py` file to make the test pass.
+
+```python
+def add(a, b):
+    return a + b
+```
+
+Then run the test again by running the following command:
+
+```bash
+make test
+```
+
+## Documentation
+
+### Writing Good Documentation
+
+#### Module-Level Documentation
+Every Python module should start with a docstring explaining its purpose:
+
+```python
+"""
+Data processing module for time series analysis.
+
+This module provides functions for loading, processing, and analyzing
+time series data with a focus on financial applications.
+
+Classes:
+    TimeSeriesData: Container for time series with metadata
+    DataProcessor: Handles data cleaning and transformation
+
+Functions:
+    load_data: Load time series from various file formats
+    process_data: Clean and preprocess time series data
+"""
+```
+
+#### Writing Effective Docstrings
+
+Docstrings serve two key purposes:
+1. In-code documentation for developers
+2. Source for automated documentation tools
+
+Documentation generators like MkDocs and Sphinx can parse docstrings to create:
+- API reference documentation
+- Function/class indexes
+- Example galleries
+- Module hierarchies 
+
+For best results with these tools:
+1. Follow Google Style Guide conventions
+2. Include all parameters and return types
+3. Add examples for complex functions
+4. Document exceptions and edge cases
+
+
+Example of a well-documented function:
+```python
+def process_data(data: np.ndarray, window_size: int = 5) -> np.ndarray:
+    """Process time series data using rolling window calculations.
+
+    Args:
+        data: Input time series array of shape (n_samples,)
+        window_size: Size of rolling window for calculations
+
+    Returns:
+        Processed data array of shape (n_samples - window_size + 1,)
+
+    Raises:
+        ValueError: If window_size is larger than data length
+        TypeError: If data is not a numpy array
+
+    Examples:
+        >>> data = np.array([1, 2, 3, 4, 5])
+        >>> process_data(data, window_size=3)
+        array([2., 3., 4.])
+    """
+```
+
+### Generating API Documentation
+
+MkDocs with Material theme provides excellent API documentation:
+
+```bash
+make docs
+```
+
+This will run the following command:
+
+```bash
+uv run mkdocs serve
+```
+
+The output will be like this:
+
+```bash
+make docs
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+INFO    -  Documentation built in 0.25 seconds
+INFO    -  [02:42:02] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO    -  [02:42:02] Serving on http://127.0.0.1:8000/StructuredPy-code/
+```
+
+In this case, the documentation will be available at `http://127.0.0.1:8000/StructuredPy-code/` in your web browser.
+You can quickly see that the documentation of the `foo` function is available in `module` section of the documentation, but the `add` function is not available in the documentation.
+This is because the `add` function does not have a docstring.
+
+The `docstring` is a string that is used to document the code. It is written in the first line of the function, class, or module.
+There are several formats for writing docstrings, but we will be using the [Google style](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings) for writing docstrings.
+
+Let's add a docstring to the `add` function in the `foo.py` file.
+
+```python
+def add(a, b):
+    """Add two numbers.
+
+    Args:
+        a: The first number.
+        b: The second number.
+
+    Returns:
+        The sum of the two numbers.
+    """
+    return a + b
+```
+
+Then run the test again by running the following command:
+
+```bash
+make docs
+```
+
+You can check from the docs that the `add` function is now available in the documentation.
+We have to note that the type definition is not available in the documentation, because we have not added the type definition to the function.
+Let's add the type definition to the `add` function in the `foo.py` file.
+
+```python
+def add(a: number, b: int) -> int:
+    """Add two numbers.
+
+    Args:
+        a: The first number.
+        b: The second number.
+
+    Returns:
+        The sum of the two numbers.
+    """
+    return a + b
+```
+
+Now we can see that the type definition is now available in the documentation.
+The type definition is not necessary for the code to run, but it is a good practice to add the type definition to the function in terms of readability and maintainability of the code.
+
+## Commit the code to Git
+
+You can commit the code to Git by running the following command:
+
+```bash
+git add .
+git commit -m "add add function"
+```
+
+Then if you want to push the code to GitHub, you can run the following command:
+
+```bash
+git push
+```
+
+## Summary
+
+In this chapter, we have learned how to create a new file, write a simple function, test the function, write documentation, and commit the code to Git.
+This is the basic workflow of coding that you will follow throughout the project.
+
+
+

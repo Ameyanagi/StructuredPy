@@ -1,0 +1,146 @@
+# Initial Setting and Tutorial
+
+This tutorial will guide you through setting up a modern Python development environment with best practices for:
+
+- Version control with Git and GitHub
+- Dependency management using uv (a fast Python package installer and resolver)
+- Project structure using cookiecutter templates
+- Testing with pytest and Test-Driven Development (TDD)
+- Documentation with MkDocs
+- Code quality tools and pre-commit hooks
+
+By following this guide, you'll create a well-structured Python project that follows some of the best practices that people use for python. The setup includes automatic testing, documentation generation, and code quality checks - essential tools for professional Python development.
+
+## Prerequisites
+
+Before starting this tutorial, you should have:
+
+- Basic Python knowledge
+- A GitHub account
+- A text editor or IDE of your choice
+- Terminal/command line familiarity
+
+But if you don't have any of these, don't worry! You can refer to the Appendix for more information.
+
+## Setting up Git
+
+### Initial Setup
+
+#### Installing Git
+
+Before you can use Git, you need to install it on your system:
+
+- **Windows**: Download and install from [git-scm.com](https://git-scm.com)
+- **macOS**: Install via Homebrew: `brew install git`
+- **Linux**: Install via package manager:
+
+  ```bash
+  # Ubuntu/Debian
+  sudo apt-get install git
+
+  # Fedora
+  sudo dnf install git
+  ```
+
+### Configuring Git
+
+After installation, configure your identity:
+This will be required when you are pushing the code to the GitHub.
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+Additional recommended configurations:
+Whenever you are pushing to the GitHub, you will be asked for the username and password. To avoid this, you can store the credentials securely.
+If you are not using GitHub, then you can skip this step.
+
+```bash
+# Store credentials securely
+git config --global credential.helper store
+```
+
+## GitHub Setup (Optional)
+
+GitHub is a popular platform for hosting Git repositories and collaborating on code. You can use it to store your code, track changes, and work with others on projects.
+You can also use GitHub Actions for continuous integration and deployment (CI/CD) workflows.
+
+You will need to create an account on GitHub and set up a personal access token to push code to GitHub.
+
+### Creating a GitHub Account
+
+1. Go to [github.com](https://github.com) and sign up for an account
+2. Verify your email address
+3. Set up two-factor authentication (recommended)
+
+### Creating a Personal Access Token
+
+Modern GitHub security requires using tokens instead of passwords:
+
+1. Go to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)
+2. Click "Generate new token (classic)"
+3. Select scopes:
+   - `repo` (Full control of private repositories)
+   - `workflow` (if using GitHub Actions)
+   - `read:org` (if working with organization repositories)
+4. Set an expiration date
+5. Generate and copy the token immediately (it won't be shown again)
+
+Store your token securely - you'll need it when pushing to GitHub.
+
+## uv: Modern Python Package Management
+
+uv is a new-generation Python package installer and resolver written in Rust. It offers several advantages over traditional tools like pip:
+
+- Extremely fast package installation and dependency resolution
+- Built-in virtual environment management
+- Compatible with pip's interface and package formats
+- Reliable dependency resolution
+- Optimized for modern Python development
+
+Here, we will only be focusing on the installation and minimal validation of the uv that is required for the project.
+
+If you want to know more about uv, you can visit the official website [here](https://astral.sh/uv/)
+
+### Installation
+
+#### Installation Methods
+
+1. **Unix/macOS**
+
+   ```bash
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
+
+2. **Windows (PowerShell)**
+   ```powershell
+   powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+   ```
+
+::: {.callout-note}
+Note: After installation on Windows, you may need to add uv to your PATH. The installation location is `%USERPROFILE%\.local\bin`. You can add this to your PATH by:
+
+1. Press Windows + X and select "System"
+2. Click "Advanced system settings"
+3. Click "Environment Variables"
+4. Under "User variables", find and select "Path"
+5. Click "Edit"
+6. Click "New"
+7. Add `%USERPROFILE%\.local\bin`
+8. Click "OK" on all windows
+:::
+
+### Verifying Installation
+
+You can verify the installation by opening a new terminal or PowerShell window and running:
+
+```powershell
+uv --version
+```
+
+## Summary
+
+In this tutorial, you learned how to set up a modern Python development environment with Git, GitHub, and uv. These tools will help you manage your code, collaborate with others, and install Python packages efficiently.
+
+In the next chapter, we'll create a new Python project using a cookiecutter template and set up a basic project structure.

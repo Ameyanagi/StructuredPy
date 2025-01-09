@@ -1,5 +1,4 @@
-# Welcome to StructuredPy {.unnumbered}
-
+# Introduction {.unnumbered}
 Welcome to StructuredPy, a practical guide to building well-structured Python applications. This book takes a hands-on approach to learning Python through real-world projects, focusing on both functional and object-oriented programming approaches.
 
 ## Who This Book Is For
