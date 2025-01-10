@@ -1,0 +1,503 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "",
+    "text": "Introduction\nWelcome to StructuredPy, a practical guide to building well-structured Python applications. This book takes a hands-on approach to learning Python through real-world projects, focusing on both functional and object-oriented programming approaches.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#who-this-book-is-for",
+    "href": "index.html#who-this-book-is-for",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "Who This Book Is For",
+    "text": "Who This Book Is For\nThis book is designed for:\n\nPython beginners who understand basic syntax and want to write better code\nProgrammers transitioning to Python from other languages\nAnyone interested in building practical Python applications",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#what-youll-build",
+    "href": "index.html#what-youll-build",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "What You’ll Build",
+    "text": "What You’ll Build\nThroughout this book, you’ll work on three main projects:\n\nTime Series Data Analysis\n\nAnalyze sensor data using both functions and classes\nLearn data processing techniques\nVisualize time series data\n\nDevice Communication\n\nBuild a mock serial communication system\nHandle device commands and responses\nManage device state and errors\n\nAPI Development\n\nCreate a FastAPI server\nConnect devices through web APIs\nBuild a complete application\n\n\nEach project is presented twice: first using functions, then using classes. This approach helps you understand when to use each style and how to combine them effectively.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use-this-book",
+    "href": "index.html#how-to-use-this-book",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "How to Use This Book",
+    "text": "How to Use This Book\n\nProject-Based Learning\nEach chapter focuses on building something practical. We start with a problem, break it down into manageable pieces, and build a solution step by step.\n\n\nCode Examples\nAll code examples are available in the code directory. For each project, you’ll find:\ncode/\n├── timeseries/\n├── device/\n└── api/\n\n\nExercises and Practice\nEach chapter includes: - Hands-on exercises - Code challenges - Suggestions for extending the projects",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#prerequisites",
+    "href": "index.html#prerequisites",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nTo get the most out of this book, you should:\n\nKnow basic Python syntax (variables, loops, conditionals)\nHave Python installed on your computer\nBe comfortable using a text editor or IDE\nHave a basic understanding of the command line\n\nIf you need to review Python basics, check the appendix for a quick reference.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "Getting Started",
+    "text": "Getting Started\n\nClone the book’s repository:\ngit clone https://github.com/Ameyanagi/StructuredPy\nInstall the required packages:\npip install -r requirements.txt\nStart with Chapter 1 and follow along with the code examples.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#what-makes-this-book-different",
+    "href": "index.html#what-makes-this-book-different",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "What Makes This Book Different",
+    "text": "What Makes This Book Different\nInstead of teaching Python concepts in isolation, this book:\n\nShows both functional and object-oriented approaches\nUses real-world examples\nFocuses on writing maintainable code\nDemonstrates practical project organization",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#navigation",
+    "href": "index.html#navigation",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "Navigation",
+    "text": "Navigation\n\nUse the sidebar to navigate between chapters\nCode examples can be copied directly from the book\nProjects build on each other progressively\n\nLet’s begin by analyzing time series data in Chapter 1!",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nThanks to all contributors and reviewers who helped improve this book.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#contributing",
+    "href": "index.html#contributing",
+    "title": "StructuredPy: Master Python through Objects and Functions",
+    "section": "Contributing",
+    "text": "Contributing\nFound a mistake or want to improve the book? Visit the GitHub repository to:\n\nReport issues\nSuggest improvements\nContribute content",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "preface.html",
+    "href": "preface.html",
+    "title": "Preface",
+    "section": "",
+    "text": "Why This Book Exists\nPython’s flexibility is both a blessing and a curse. While it allows you to solve problems in many ways, it can be challenging to know which approach is best. This book aims to bridge the gap between writing code that just works and writing code that’s clear, maintainable, and scalable.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "preface.html#our-approach",
+    "href": "preface.html#our-approach",
+    "title": "Preface",
+    "section": "Our Approach",
+    "text": "Our Approach\nWe believe in learning by doing. Instead of abstract concepts, we focus on practical projects that you might encounter in real work. Each project is implemented twice:\n\nFirst using functions - Simple, straightforward, and easy to understand\nThen using classes - Organized, maintainable, and scalable\n\nThis dual approach helps you understand: - When to use each style - The trade-offs involved - How to combine approaches effectively",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "preface.html#book-structure",
+    "href": "preface.html#book-structure",
+    "title": "Preface",
+    "section": "Book Structure",
+    "text": "Book Structure\nEach project follows this pattern:\n\nProblem Introduction\n\nWhat we’re building\nWhy it matters\nExpected outcomes\n\nFunctional Solution\n\nStep-by-step implementation\nKey concepts explained\nCode organization\n\nObject-Oriented Solution\n\nConverting to classes\nBenefits and trade-offs\nDesign decisions\n\nPractical Extensions\n\nReal-world considerations\nCommon challenges\nFurther improvements",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "preface.html#key-principles",
+    "href": "preface.html#key-principles",
+    "title": "Preface",
+    "section": "Key Principles",
+    "text": "Key Principles\nThroughout the book, we emphasize:\n\nWriting clear, focused code\nBuilding maintainable solutions\nMaking conscious design decisions\nTesting and error handling\nReal-world applications",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "preface.html#a-note-on-style",
+    "href": "preface.html#a-note-on-style",
+    "title": "Preface",
+    "section": "A Note on Style",
+    "text": "A Note on Style\nThere’s rarely one “right” way to solve a programming problem. We present approaches that are:\n\nClear to understand\nEasy to maintain\nPractical to implement\nWell-tested in real applications",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "preface.html#getting-help",
+    "href": "preface.html#getting-help",
+    "title": "Preface",
+    "section": "Getting Help",
+    "text": "Getting Help\nIf you get stuck:\n\nCheck the code in the book’s repository\nReview the chapter’s key concepts\nTry breaking the problem into smaller pieces\nCheck the online resources in the appendix\n\nRemember: Every experienced programmer was once a beginner. Take your time, practice with the examples, and don’t hesitate to experiment with the code.\nLet’s start building better Python applications!",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "chapters/0101-initial-setting-and-tutorial.html",
+    "href": "chapters/0101-initial-setting-and-tutorial.html",
+    "title": "1  Initial Setting and Tutorial",
+    "section": "",
+    "text": "1.1 Prerequisites\nThis tutorial will guide you through setting up a modern Python development environment with best practices for:\nBy following this guide, you’ll create a well-structured Python project that follows some of the best practices that people use for python. The setup includes automatic testing, documentation generation, and code quality checks - essential tools for professional Python development.\nBefore starting this tutorial, you should have:\nBut if you don’t have any of these, don’t worry! You can refer to the Appendix for more information.",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Initial Setting and Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0101-initial-setting-and-tutorial.html#prerequisites",
+    "href": "chapters/0101-initial-setting-and-tutorial.html#prerequisites",
+    "title": "1  Initial Setting and Tutorial",
+    "section": "",
+    "text": "Basic Python knowledge\nA GitHub account\nA text editor or IDE of your choice\nTerminal/command line familiarity",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Initial Setting and Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0101-initial-setting-and-tutorial.html#setting-up-git",
+    "href": "chapters/0101-initial-setting-and-tutorial.html#setting-up-git",
+    "title": "1  Initial Setting and Tutorial",
+    "section": "1.2 Setting up Git",
+    "text": "1.2 Setting up Git\n\n1.2.1 Initial Setup\n\n1.2.1.1 Installing Git\nBefore you can use Git, you need to install it on your system:\n\nWindows: Download and install from git-scm.com\nmacOS: Install via Homebrew: brew install git\nLinux: Install via package manager:\n# Ubuntu/Debian\nsudo apt-get install git\n\n# Fedora\nsudo dnf install git\n\n\n\n\n1.2.2 Configuring Git\nAfter installation, configure your identity: This will be required when you are pushing the code to the GitHub.\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"you@example.com\"\nAdditional recommended configurations: Whenever you are pushing to the GitHub, you will be asked for the username and password. To avoid this, you can store the credentials securely. If you are not using GitHub, then you can skip this step.\n# Store credentials securely\ngit config --global credential.helper store",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Initial Setting and Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0101-initial-setting-and-tutorial.html#github-setup-optional",
+    "href": "chapters/0101-initial-setting-and-tutorial.html#github-setup-optional",
+    "title": "1  Initial Setting and Tutorial",
+    "section": "1.3 GitHub Setup (Optional)",
+    "text": "1.3 GitHub Setup (Optional)\nGitHub is a popular platform for hosting Git repositories and collaborating on code. You can use it to store your code, track changes, and work with others on projects. You can also use GitHub Actions for continuous integration and deployment (CI/CD) workflows.\nYou will need to create an account on GitHub and set up a personal access token to push code to GitHub.\n\n1.3.1 Creating a GitHub Account\n\nGo to github.com and sign up for an account\nVerify your email address\nSet up two-factor authentication (recommended)\n\n\n\n1.3.2 Creating a Personal Access Token\nModern GitHub security requires using tokens instead of passwords:\n\nGo to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)\nClick “Generate new token (classic)”\nSelect scopes:\n\nrepo (Full control of private repositories)\nworkflow (if using GitHub Actions)\nread:org (if working with organization repositories)\n\nSet an expiration date\nGenerate and copy the token immediately (it won’t be shown again)\n\nStore your token securely - you’ll need it when pushing to GitHub.",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Initial Setting and Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0101-initial-setting-and-tutorial.html#uv-modern-python-package-management",
+    "href": "chapters/0101-initial-setting-and-tutorial.html#uv-modern-python-package-management",
+    "title": "1  Initial Setting and Tutorial",
+    "section": "1.4 uv: Modern Python Package Management",
+    "text": "1.4 uv: Modern Python Package Management\nuv is a new-generation Python package installer and resolver written in Rust. It offers several advantages over traditional tools like pip:\n\nExtremely fast package installation and dependency resolution\nBuilt-in virtual environment management\nCompatible with pip’s interface and package formats\nReliable dependency resolution\nOptimized for modern Python development\n\nHere, we will only be focusing on the installation and minimal validation of the uv that is required for the project.\nIf you want to know more about uv, you can visit the official website here\n\n1.4.1 Installation\n\n1.4.1.1 Installation Methods\n\nUnix/macOS\ncurl -LsSf https://astral.sh/uv/install.sh | sh\nWindows (PowerShell)\npowershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"\n\n\n\n\n\n\n\nNote\n\n\n\nNote: After installation on Windows, you may need to add uv to your PATH. The installation location is %USERPROFILE%\\.local\\bin. You can add this to your PATH by:\n\nPress Windows + X and select “System”\nClick “Advanced system settings”\nClick “Environment Variables”\nUnder “User variables”, find and select “Path”\nClick “Edit”\nClick “New”\nAdd %USERPROFILE%\\.local\\bin\nClick “OK” on all windows\n\n\n\n\n\n\n1.4.2 Verifying Installation\nYou can verify the installation by opening a new terminal or PowerShell window and running:\nuv --version",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Initial Setting and Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0101-initial-setting-and-tutorial.html#summary",
+    "href": "chapters/0101-initial-setting-and-tutorial.html#summary",
+    "title": "1  Initial Setting and Tutorial",
+    "section": "1.5 Summary",
+    "text": "1.5 Summary\nIn this tutorial, you learned how to set up a modern Python development environment with Git, GitHub, and uv. These tools will help you manage your code, collaborate with others, and install Python packages efficiently.\nIn the next chapter, we’ll create a new Python project using a cookiecutter template and set up a basic project structure.",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Initial Setting and Tutorial</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0102-project-initialization.html",
+    "href": "chapters/0102-project-initialization.html",
+    "title": "2  Project Initialization Guide",
+    "section": "",
+    "text": "2.1 Understanding Project Structure\nWe will be using boilerplate that includes modern dependency management with uv, comprehensive testing setup with pytest, documentation with MkDocs, code quality tools, CI/CD with GitHub Actions, Docker support, and dev container configuration for VSCode. This will give you a solid foundation for professional Python development without having to set up each component manually.\nBefore we dive into creating a new project, it’s important to understand what makes up a well-structured Python project:",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Initialization Guide</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0102-project-initialization.html#understanding-project-structure",
+    "href": "chapters/0102-project-initialization.html#understanding-project-structure",
+    "title": "2  Project Initialization Guide",
+    "section": "",
+    "text": "Source code directory (your main package)\nTests directory\nDocumentation\nBuild configuration files\nDevelopment tools configuration\nCI/CD configuration\nLicense and README files",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Initialization Guide</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0102-project-initialization.html#using-cookiecutter",
+    "href": "chapters/0102-project-initialization.html#using-cookiecutter",
+    "title": "2  Project Initialization Guide",
+    "section": "2.2 Using Cookiecutter",
+    "text": "2.2 Using Cookiecutter\n\n2.2.1 What is Cookiecutter?\nCookiecutter is a project template tool that we’ll use through uvx to create our project structure. It uses a templating engine to replace project variables with your custom values, ensuring consistent project structure across all your repositories.\n\n\n2.2.2 Project Template Selection\nWe’ll use the cookiecutter-uv template created by Florian Maas, which is specifically designed for modern Python projects using uv. This well-maintained template includes:\n\nModern dependency management with uv\nComprehensive testing setup with pytest\nDocumentation with MkDocs\nCode quality tools (ruff, mypy)\nCI/CD with GitHub Actions\nDocker support\nDev container configuration for VSCode\n\n\n\n2.2.3 Project Initialization Workflow\nHere’s a high-level overview of the project initialization workflow: The green boxes represent automated steps, while the red boxes represent manual steps.\n\n\n\n\n\ngraph TB\n    Init[Project Initialization] --&gt; Cookie[Run Cookiecutter]\n    Cookie --&gt; Setup[Setup Project Structure]\n    Setup --&gt; Git[Initialize Git]\n    Git --&gt; Install[make install]\n    \n    Install --&gt; DevLoop[Development Loop]\n    \n    subgraph DevLoop[Development Loop]\n        direction TB\n        WriteTest[Write Test] --&gt; Test1[make test]\n        Test1 --&gt; Code[Write/Edit Code]\n        Code --&gt; Test2[make test]\n        \n        Test2 --&gt;|Fail| Code\n        Test2 --&gt;|Pass| Check[make check]\n        \n        Check --&gt; Docs[make docs]\n        Docs --&gt; CommitGroup\n        \n        subgraph CommitGroup[Git Commit Process]\n            direction LR\n            Commit[Git Commit]\n            PreCommit[Pre-commit Hooks:&lt;br/&gt;- Check Conflicts&lt;br/&gt;- Ruff Format&lt;br/&gt;- Ruff Lint&lt;br/&gt;- Prettier]\n        end\n        \n        CommitGroup --&gt; CI[GitHub Actions CI]\n        CI --&gt; Deploy[make publish]\n    end\n    \n    %% Manual steps\n    classDef manual fill:#f9d6d6,stroke:#d64545\n    class Code,Commit,Init,Cookie,WriteTest,Git manual\n    \n    %% Automated steps\n    classDef automated fill:#d4edda,stroke:#28a745\n    class Install,Check,Test1,Test2,Docs,Deploy,CI,PreCommit automated\n    \n    %% Subgraphs\n    classDef process fill:#e6f3ff,stroke:#0056b3\n    class CommitGroup process\n    \n    %% Container\n    style DevLoop fill:#f0f0f0,stroke:#333,stroke-width:2px\n\n\n\n\n\n\n\n\n2.2.4 Creating Your Project\nRun the template generator:\nuvx cookiecutter https://github.com/fpgmaas/cookiecutter-uv.git\nOnce you run the command, you will be prompted to enter some information about your project. This information will be used to generate the project structure and files.\nInstalled 22 packages in 11ms\n  [1/14] author (Florian Maas): Ameyanagi\n  [2/14] email (fpgmaas@gmail.com): contact@ameyanagi.com\n  [3/14] author_github_handle (fpgmaas): Ameyanagi\n  [4/14] project_name (example-project): StructuredPy-code\n  [5/14] project_slug (structuredpy_code):\n  [6/14] project_description (This is a template repository for Python projects that use uv for their dependency management.): This is a repository containing the example project used in the StructuredPy\n  [7/14] Select include_github_actions\n    1 - y\n    2 - n\n    Choose from [1/2] (1):\n  [8/14] Select publish_to_pypi\n    1 - y\n    2 - n\n    Choose from [1/2] (1):\n  [9/14] Select deptry\n    1 - y\n    2 - n\n    Choose from [1/2] (1):\n  [10/14] Select mkdocs\n    1 - y\n    2 - n\n    Choose from [1/2] (1):\n  [11/14] Select codecov\n    1 - y\n    2 - n\n    Choose from [1/2] (1):\n  [12/14] Select dockerfile\n    1 - y\n    2 - n\n    Choose from [1/2] (1):\n  [13/14] Select devcontainer\n    1 - y\n    2 - n\n    Choose from [1/2] (1):\n  [14/14] Select open_source_license\n    1 - MIT license\n    2 - BSD license\n    3 - ISC license\n    4 - Apache Software License 2.0\n    5 - GNU General Public License v3\n    6 - Not open source\n    Choose from [1/2/3/4/5/6] (1):\n\n\n2.2.5 Project directory\nYou can check the initial directory tree by running the following command:\ntree -a -L 4 StructuredPy-code # Please change the directory name to your project name or a directory name you specified in the cookiecutter command\nThe output will be like this:\nStructuredPy-code\n├── codecov.yaml\n├── CONTRIBUTING.md\n├── .devcontainer\n│   ├── devcontainer.json\n│   └── postCreateCommand.sh\n├── Dockerfile\n├── docs\n│   ├── index.md\n│   └── modules.md\n├── .editorconfig\n├── .github\n│   ├── actions\n│   │   └── setup-python-env\n│   │       └── action.yml\n│   └── workflows\n│       ├── main.yml\n│       ├── on-release-main.yml\n│       └── validate-codecov-config.yml\n├── .gitignore\n├── LICENSE\n├── Makefile\n├── mkdocs.yml\n├── .pre-commit-config.yaml\n├── pyproject.toml\n├── README.md\n├── structuredpy_code\n│   ├── foo.py\n│   └── __init__.py\n├── tests\n│   └── test_foo.py\n└── tox.ini\n\n9 directories, 23 files\n\n\n2.2.6 Initializing git repository\ngit init\ngit add .\ngit commit -m \"first commit\"\ngit branch -M main\ngit remote add origin https://github.com/Ameyanagi/StructuredPy-code.git\ngit push -u origin main\n\n\n2.2.7 Installing the python dependencies\nmake install\nThis will run the following command:\nuv sync\nuv run pre-commit install\nThe output will be like this:\n🚀 Creating virtual environment using uv\nUsing CPython 3.13.1 interpreter at: /usr/bin/python3\nCreating virtual environment at: .venv\nResolved 63 packages in 620ms\n   Built structuredpy-code @ file:///home/ameyanagi/StructuredPy-code\nPrepared 59 packages in 1.12s\nInstalled 59 packages in 169ms\n + babel==2.16.0\n + cachetools==5.5.0\n + certifi==2024.12.14\n + cfgv==3.4.0\n + chardet==5.2.0\n + charset-normalizer==3.4.1\n + click==8.1.8\n + colorama==0.4.6\n + coverage==7.6.10\n + deptry==0.21.2\n + distlib==0.3.9\n + filelock==3.16.1\n + ghp-import==2.1.0\n + griffe==1.5.4\n + identify==2.6.5\n + idna==3.10\n + iniconfig==2.0.0\n + jinja2==3.1.5\n + markdown==3.7\n + markupsafe==3.0.2\n + mergedeep==1.3.4\n + mkdocs==1.6.1\n + mkdocs-autorefs==1.2.0\n + mkdocs-get-deps==0.2.0\n + mkdocs-material==9.5.49\n + mkdocs-material-extensions==1.3.1\n + mkdocstrings==0.27.0\n + mkdocstrings-python==1.13.0\n + mypy==1.14.1\n + mypy-extensions==1.0.0\n + nodeenv==1.9.1\n + packaging==24.2\n + paginate==0.5.7\n + pathspec==0.12.1\n + platformdirs==4.3.6\n + pluggy==1.5.0\n + pre-commit==4.0.1\n + pygments==2.19.1\n + pymdown-extensions==10.13\n + pyproject-api==1.8.0\n + pytest==8.3.4\n + pytest-cov==6.0.0\n + python-dateutil==2.9.0.post0\n + pyyaml==6.0.2\n + pyyaml-env-tag==0.1\n + regex==2024.11.6\n + requests==2.32.3\n + requirements-parser==0.11.0\n + ruff==0.8.6\n + six==1.17.0\n + structuredpy-code==0.0.1 (from file:///home/ameyanagi/StructuredPy-code)\n + tox==4.23.2\n + tox-uv==1.17.0\n + types-setuptools==75.6.0.20241223\n + typing-extensions==4.12.2\n + urllib3==2.3.0\n + uv==0.5.15\n + virtualenv==20.28.1\n + watchdog==6.0.0\npre-commit installed at .git/hooks/pre-commit",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Initialization Guide</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0102-project-initialization.html#summary",
+    "href": "chapters/0102-project-initialization.html#summary",
+    "title": "2  Project Initialization Guide",
+    "section": "2.3 Summary",
+    "text": "2.3 Summary\nIn this chapter, you learned how to initialize a new Python project using the cookiecutter-uv template. This template provides a modern Python project structure with uv, pytest, MkDocs, and other tools to help you get started quickly.\nIn the next chapter, we’ll explore how to write and run tests for your Python project using the project structure we just created.",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Initialization Guide</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0103-workflow.html",
+    "href": "chapters/0103-workflow.html",
+    "title": "3  General workflow of coding",
+    "section": "",
+    "text": "3.1 Open code in Editor\nThis guide will walk you through creating and maintaining a Python project, from writing code to testing, documentation, and version control. You’ll learn how to write testable code following Test Driven Development (TDD) principles, create clear documentation, and manage your codebase with Git.\nOpen the root directory of the project in your preferred code editor (VSCode, Neovim, etc.).",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>General workflow of coding</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0103-workflow.html#running-the-code",
+    "href": "chapters/0103-workflow.html#running-the-code",
+    "title": "3  General workflow of coding",
+    "section": "3.2 Running the code",
+    "text": "3.2 Running the code\nThe source code is included in the structuredpy_code directory. By default the foo.py file is included in the directory. You can run the code by running the following command:\nuv run structuredpy_code/foo.py\nAt this moment, there will be no output, because the foo.py file is empty.\ndef foo(bar: str) -&gt; str:\n    \"\"\"Summary line.\n\n    Extended description of function.\n\n    Args:\n        bar: Description of input argument.\n\n    Returns:\n        Description of return value\n    \"\"\"\n\n    return bar\n\n\nif __name__ == \"__main__\":  # pragma: no cover\n    pass\nWe will be make a new file and work on that file, but configuration would be the same.",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>General workflow of coding</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0103-workflow.html#creating-a-python-file-and-running-it",
+    "href": "chapters/0103-workflow.html#creating-a-python-file-and-running-it",
+    "title": "3  General workflow of coding",
+    "section": "3.3 Creating a python file and running it",
+    "text": "3.3 Creating a python file and running it\nLet’s create a new file called hello.py in the structuredpy_code directory. In the hello.py file, we will write a simple function that prints “hello world” to the console.\ndef main():\n    print(\"hello world\")\n\n\nif __name__ == \"__main__\":\n    main()\nYou can run the code by running the following command:\nuv run structuredpy_code/hello.py\nThe output will be like this:\nhello world",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>General workflow of coding</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0103-workflow.html#test-the-code",
+    "href": "chapters/0103-workflow.html#test-the-code",
+    "title": "3  General workflow of coding",
+    "section": "3.4 Test the code",
+    "text": "3.4 Test the code\nLet’s look at the test file in the tests directory. The test file is called test_foo.py and it tests the foo function in the foo.py file.\nfrom structuredpy_code.foo import foo\n\n\ndef test_foo():\n    assert foo(\"foo\") == \"foo\"\n\n3.4.1 Running the test\nYou can run the test by running the following command:\nmake test\nThis command will run the following command:\nuv run python -m pytest --cov --cov-config=pyproject.toml --cov-report=xml\nThe output will be like this:\n🚀 Testing code: Running pytest\n=================================================================== test session starts ===================================================================\nplatform linux -- Python 3.13.1, pytest-8.3.4, pluggy-1.5.0\nrootdir: /home/ameyanagi/StructuredPy-code\nconfigfile: pyproject.toml\ntestpaths: tests\nplugins: cov-6.0.0\ncollected 1 item\n\ntests/test_foo.py .                                                                                                                                 [100%]\n\n---------- coverage: platform linux, python 3.13.1-final-0 -----------\nCoverage XML written to file coverage.xml\n\n\n==================================================================== 1 passed in 0.03s ====================================================================\nWhat this does is that it runs the test file cnd see if the code runs with out the error. In the test_foo.py file, we are testing the foo function in the foo.py file will return the same string that we passed to it. assert is a keyword that is used to check if the condition is true. If the condition is false, it will raise an AssertionError.\n\n3.4.1.1 Basics of Test Driven Development (TDD)\nTDD is a software development process that relies on the repetition of a very short development cycle: requirements are turned into very specific test cases, then the software is improved so that the tests pass. The cycle is repeated until the software is complete.\nLet’s assume we want to add a new function called add in the foo.py file. We will first create a add function stub in the test_foo.py file.\ndef add(a, b):\n    pass\nThen in the test_foo.py file, we will write a test for the add function. Here, we will write 4 tests for the add function to check if the function works as expected.\nfrom structuredpy_code.foo import add\n\ndef test_add():\n    assert add(1, 2) == 3\n\ndef test_add_negative():\n    assert add(-1, -2) == -3\n\ndef test_add_zero():\n    assert add(0, 0) == 0\n\ndef test_add_float():\n    assert add(1.5, 2.5) == 4.0\nThen we will run the test by running the following command:\nmake test\nWe now see that all the tests have failed, because we have not implemented the add function yet. The main idea of TDD is to write the test first, then implement the function to make the test pass.\nLet’s implement the add function in the foo.py file to make the test pass.\ndef add(a, b):\n    return a + b\nThen run the test again by running the following command:\nmake test",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>General workflow of coding</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0103-workflow.html#documentation",
+    "href": "chapters/0103-workflow.html#documentation",
+    "title": "3  General workflow of coding",
+    "section": "3.5 Documentation",
+    "text": "3.5 Documentation\n\n3.5.1 Writing Good Documentation\n\n3.5.1.1 Module-Level Documentation\nEvery Python module should start with a docstring explaining its purpose:\n\"\"\"\nData processing module for time series analysis.\n\nThis module provides functions for loading, processing, and analyzing\ntime series data with a focus on financial applications.\n\nClasses:\n    TimeSeriesData: Container for time series with metadata\n    DataProcessor: Handles data cleaning and transformation\n\nFunctions:\n    load_data: Load time series from various file formats\n    process_data: Clean and preprocess time series data\n\"\"\"\n\n\n3.5.1.2 Writing Effective Docstrings\nDocstrings serve two key purposes: 1. In-code documentation for developers 2. Source for automated documentation tools\nDocumentation generators like MkDocs and Sphinx can parse docstrings to create: - API reference documentation - Function/class indexes - Example galleries - Module hierarchies\nFor best results with these tools: 1. Follow Google Style Guide conventions 2. Include all parameters and return types 3. Add examples for complex functions 4. Document exceptions and edge cases\nExample of a well-documented function:\ndef process_data(data: np.ndarray, window_size: int = 5) -&gt; np.ndarray:\n    \"\"\"Process time series data using rolling window calculations.\n\n    Args:\n        data: Input time series array of shape (n_samples,)\n        window_size: Size of rolling window for calculations\n\n    Returns:\n        Processed data array of shape (n_samples - window_size + 1,)\n\n    Raises:\n        ValueError: If window_size is larger than data length\n        TypeError: If data is not a numpy array\n\n    Examples:\n        &gt;&gt;&gt; data = np.array([1, 2, 3, 4, 5])\n        &gt;&gt;&gt; process_data(data, window_size=3)\n        array([2., 3., 4.])\n    \"\"\"\n\n\n\n3.5.2 Generating API Documentation\nMkDocs with Material theme provides excellent API documentation:\nmake docs\nThis will run the following command:\nuv run mkdocs serve\nThe output will be like this:\nmake docs\nINFO    -  Building documentation...\nINFO    -  Cleaning site directory\nINFO    -  Documentation built in 0.25 seconds\nINFO    -  [02:42:02] Watching paths for changes: 'docs', 'mkdocs.yml'\nINFO    -  [02:42:02] Serving on http://127.0.0.1:8000/StructuredPy-code/\nIn this case, the documentation will be available at http://127.0.0.1:8000/StructuredPy-code/ in your web browser. You can quickly see that the documentation of the foo function is available in module section of the documentation, but the add function is not available in the documentation. This is because the add function does not have a docstring.\nThe docstring is a string that is used to document the code. It is written in the first line of the function, class, or module. There are several formats for writing docstrings, but we will be using the Google style for writing docstrings.\nLet’s add a docstring to the add function in the foo.py file.\ndef add(a, b):\n    \"\"\"Add two numbers.\n\n    Args:\n        a: The first number.\n        b: The second number.\n\n    Returns:\n        The sum of the two numbers.\n    \"\"\"\n    return a + b\nThen run the test again by running the following command:\nmake docs\nYou can check from the docs that the add function is now available in the documentation. We have to note that the type definition is not available in the documentation, because we have not added the type definition to the function. Let’s add the type definition to the add function in the foo.py file.\ndef add(a: number, b: int) -&gt; int:\n    \"\"\"Add two numbers.\n\n    Args:\n        a: The first number.\n        b: The second number.\n\n    Returns:\n        The sum of the two numbers.\n    \"\"\"\n    return a + b\nNow we can see that the type definition is now available in the documentation. The type definition is not necessary for the code to run, but it is a good practice to add the type definition to the function in terms of readability and maintainability of the code.",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>General workflow of coding</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0103-workflow.html#commit-the-code-to-git",
+    "href": "chapters/0103-workflow.html#commit-the-code-to-git",
+    "title": "3  General workflow of coding",
+    "section": "3.6 Commit the code to Git",
+    "text": "3.6 Commit the code to Git\nYou can commit the code to Git by running the following command:\ngit add .\ngit commit -m \"add add function\"\nThen if you want to push the code to GitHub, you can run the following command:\ngit push",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>General workflow of coding</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/0103-workflow.html#summary",
+    "href": "chapters/0103-workflow.html#summary",
+    "title": "3  General workflow of coding",
+    "section": "3.7 Summary",
+    "text": "3.7 Summary\nIn this chapter, we have learned how to create a new file, write a simple function, test the function, write documentation, and commit the code to Git. This is the basic workflow of coding that you will follow throughout the project.",
+    "crumbs": [
+      "Initial setting and basic workflow",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>General workflow of coding</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/python_basics.html",
+    "href": "appendices/python_basics.html",
+    "title": "4  Python Basics",
+    "section": "",
+    "text": "4.1 Variables and Data Types\nThis appendix covers the fundamental Python concepts you’ll need for this tutorial.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Python Basics</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/python_basics.html#variables-and-data-types",
+    "href": "appendices/python_basics.html#variables-and-data-types",
+    "title": "4  Python Basics",
+    "section": "",
+    "text": "4.1.1 Basic Data Types\n# Numbers\ntemperature = 25.5       # Float\ncount = 10              # Integer\n\n# Strings\nmessage = \"Hello\"       # String\ndevice_id = 'DEV001'    # String (single or double quotes)\n\n# Booleans\nis_connected = True     # Boolean\nis_ready = False       # Boolean\n\n# None (null value)\nresult = None          # None type\n\n\n4.1.2 Lists and Dictionaries\n# Lists (ordered, changeable)\ntemperatures = [25.5, 26.0, 25.8]\ndevices = ['DEV001', 'DEV002', 'DEV003']\n\n# Accessing list elements\nfirst_temp = temperatures[0]     # 25.5\nlast_device = devices[-1]        # 'DEV003'\n\n# Changing list elements\ntemperatures[0] = 26.5\n\n# Adding to lists\ntemperatures.append(26.2)\n\n# Dictionaries (key-value pairs)\ndevice_info = {\n    'id': 'DEV001',\n    'temperature': 25.5,\n    'connected': True\n}\n\n# Accessing dictionary values\ndevice_id = device_info['id']           # 'DEV001'\ntemp = device_info.get('temperature')   # 25.5",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Python Basics</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/python_basics.html#control-flow",
+    "href": "appendices/python_basics.html#control-flow",
+    "title": "4  Python Basics",
+    "section": "4.2 Control Flow",
+    "text": "4.2 Control Flow\n\n4.2.1 If Statements\ntemperature = 25.5\n\nif temperature &gt; 30:\n    print(\"Temperature too high\")\nelif temperature &lt; 20:\n    print(\"Temperature too low\")\nelse:\n    print(\"Temperature normal\")\n\n# Using and/or\nif temperature &gt; 20 and temperature &lt; 30:\n    print(\"Temperature in range\")\n\n# Checking for None\nif result is not None:\n    print(\"Have result\")\n\n\n4.2.2 Loops\n# For loops with lists\nfor temp in temperatures:\n    print(f\"Temperature: {temp}\")\n\n# For loops with range\nfor i in range(5):\n    print(f\"Reading {i}\")\n\n# While loops\ncount = 0\nwhile count &lt; 5:\n    print(f\"Count: {count}\")\n    count += 1\n\n# Breaking loops\nwhile True:\n    temperature = get_temperature()\n    if temperature &gt; 30:\n        break",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Python Basics</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/python_basics.html#functions",
+    "href": "appendices/python_basics.html#functions",
+    "title": "4  Python Basics",
+    "section": "4.3 Functions",
+    "text": "4.3 Functions\n\n4.3.1 Basic Functions\n# Simple function\ndef get_temperature():\n    return 25.5\n\n# Function with parameters\ndef check_temperature(temp, min_temp, max_temp):\n    return min_temp &lt;= temp &lt;= max_temp\n\n# Function with default values\ndef read_sensor(retries=3):\n    for i in range(retries):\n        # Try reading sensor\n        pass\n\n\n4.3.2 Return Values\n# Single return value\ndef calculate_average(values):\n    if not values:\n        return 0\n    return sum(values) / len(values)\n\n# Multiple return values\ndef get_stats(values):\n    minimum = min(values)\n    maximum = max(values)\n    average = sum(values) / len(values)\n    return minimum, maximum, average",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Python Basics</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/python_basics.html#exception-handling",
+    "href": "appendices/python_basics.html#exception-handling",
+    "title": "4  Python Basics",
+    "section": "4.4 Exception Handling",
+    "text": "4.4 Exception Handling\n# Basic try/except\ntry:\n    temperature = get_temperature()\nexcept Exception as e:\n    print(f\"Error: {e}\")\n\n# Multiple exception types\ntry:\n    with open('data.txt') as f:\n        data = f.read()\nexcept FileNotFoundError:\n    print(\"File not found\")\nexcept PermissionError:\n    print(\"Permission denied\")\nexcept Exception as e:\n    print(f\"Unknown error: {e}\")\n\n# Using finally\ntry:\n    device.connect()\n    device.read_data()\nexcept Exception as e:\n    print(f\"Error: {e}\")\nfinally:\n    device.disconnect()  # Always runs",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Python Basics</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/python_basics.html#string-formatting",
+    "href": "appendices/python_basics.html#string-formatting",
+    "title": "4  Python Basics",
+    "section": "4.5 String Formatting",
+    "text": "4.5 String Formatting\n# f-strings (recommended)\ntemp = 25.5\nmessage = f\"Temperature: {temp}°C\"\n\n# Format method\nmessage = \"Temperature: {:.1f}°C\".format(temp)\n\n# String concatenation\nmessage = \"Temperature: \" + str(temp) + \"°C\"",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Python Basics</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/python_basics.html#file-operations",
+    "href": "appendices/python_basics.html#file-operations",
+    "title": "4  Python Basics",
+    "section": "4.6 File Operations",
+    "text": "4.6 File Operations\n# Reading files\nwith open('data.txt', 'r') as file:\n    content = file.read()        # Read entire file\n    lines = file.readlines()     # Read lines into list\n\n# Writing files\nwith open('log.txt', 'w') as file:\n    file.write(\"Temperature log\\n\")\n    file.write(f\"Reading: {temp}\\n\")\n\n# Appending to files\nwith open('log.txt', 'a') as file:\n    file.write(f\"New reading: {temp}\\n\")",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Python Basics</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/python_basics.html#modules-and-imports",
+    "href": "appendices/python_basics.html#modules-and-imports",
+    "title": "4  Python Basics",
+    "section": "4.7 Modules and Imports",
+    "text": "4.7 Modules and Imports\n# Importing entire modules\nimport time\ntime.sleep(1)\n\n# Importing specific items\nfrom datetime import datetime\ncurrent_time = datetime.now()\n\n# Importing with alias\nimport pandas as pd\ndf = pd.DataFrame()",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Python Basics</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/python_basics.html#essential-built-in-functions",
+    "href": "appendices/python_basics.html#essential-built-in-functions",
+    "title": "4  Python Basics",
+    "section": "4.8 Essential Built-in Functions",
+    "text": "4.8 Essential Built-in Functions\n# len() - Length of sequences\nlength = len([1, 2, 3])     # 3\n\n# range() - Number sequences\nfor i in range(5):          # 0 to 4\n\n# print() - Output\nprint(f\"Value: {value}\")    # Formatted output\n\n# type() - Get type of object\ndata_type = type(value)     # Get type\n\n# str(), int(), float() - Type conversion\ntext = str(123)             # Convert to string\nnumber = int(\"123\")         # Convert to integer\ndecimal = float(\"12.3\")     # Convert to float",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Python Basics</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/python_basics.html#list-operations",
+    "href": "appendices/python_basics.html#list-operations",
+    "title": "4  Python Basics",
+    "section": "4.9 List Operations",
+    "text": "4.9 List Operations\n# Common list methods\nvalues = [1, 2, 3]\nvalues.append(4)            # Add to end\nvalues.insert(0, 0)         # Insert at position\nvalues.remove(2)            # Remove value\nvalues.pop()               # Remove and return last item\n\n# List slicing\nfirst_two = values[0:2]     # Get first two items\nreversed_list = values[::-1]  # Reverse list\n\n# List comprehension\nsquares = [x**2 for x in range(5)]",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Python Basics</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/python_basics.html#dictionary-operations",
+    "href": "appendices/python_basics.html#dictionary-operations",
+    "title": "4  Python Basics",
+    "section": "4.10 Dictionary Operations",
+    "text": "4.10 Dictionary Operations\n# Common dictionary methods\ninfo = {'id': 'DEV001'}\ninfo['temp'] = 25.5        # Add/update key-value\nvalue = info.get('id')     # Safe get with default\ninfo.update({'connected': True})  # Update multiple\n\n# Checking keys\nif 'id' in info:\n    print(\"Has ID\")\n\n# Dictionary comprehension\nsquares = {x: x**2 for x in range(3)}",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Python Basics</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/python_basics.html#common-modules-used-in-this-tutorial",
+    "href": "appendices/python_basics.html#common-modules-used-in-this-tutorial",
+    "title": "4  Python Basics",
+    "section": "4.11 Common Modules Used in This Tutorial",
+    "text": "4.11 Common Modules Used in This Tutorial\n# Time and dates\nimport time\ntime.sleep(1)              # Wait 1 second\n\nfrom datetime import datetime\nnow = datetime.now()       # Current time\n\n# JSON handling\nimport json\ndata = json.loads('{\"temp\": 25.5}')  # Parse JSON\ntext = json.dumps(data)    # Convert to JSON\n\n# System operations\nimport os\npath = os.path.join('folder', 'file.txt')",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Python Basics</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/python_basics.html#code-style-guidelines",
+    "href": "appendices/python_basics.html#code-style-guidelines",
+    "title": "4  Python Basics",
+    "section": "4.12 Code Style Guidelines",
+    "text": "4.12 Code Style Guidelines\n\nUse clear, descriptive names\nUse snake_case for functions and variables\nAdd spaces around operators\nUse 4 spaces for indentation\nAdd comments for complex logic\nKeep functions focused and small\nHandle errors appropriately\n\nExample of well-styled code:\ndef calculate_average_temperature(readings):\n    \"\"\"Calculate average temperature from a list of readings.\"\"\"\n    if not readings:\n        return None\n        \n    try:\n        total = sum(readings)\n        return total / len(readings)\n    except Exception as e:\n        print(f\"Error calculating average: {e}\")\n        return None",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Python Basics</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/python_basics.html#whats-next",
+    "href": "appendices/python_basics.html#whats-next",
+    "title": "4  Python Basics",
+    "section": "4.13 What’s Next",
+    "text": "4.13 What’s Next\nThis appendix covered the Python basics needed for our tutorial. As you work through the main chapters, refer back here if you need to review any concepts.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Python Basics</span>"
+    ]
+  }
+]
